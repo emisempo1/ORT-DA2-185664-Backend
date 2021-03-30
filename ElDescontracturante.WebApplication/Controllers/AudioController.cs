@@ -37,7 +37,7 @@ namespace WebApplication1.Controllers
             }
             catch (Excepciones.ExcepcionAudioDuplicado)
             {
-                return BadRequest("Verifique nombre categoria o de la region");
+                return BadRequest("Ya existe un Audio con Dicho Nombre");
             }
 
             return Ok("Se Agrego Correctamente");
