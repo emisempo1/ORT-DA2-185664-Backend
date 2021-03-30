@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\Dominio\\ElDescontracturante.Dominio.csproj",
-      "projectName": "ElDescontracturante.Dominio",
-      "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\Dominio\\ElDescontracturante.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj",
+      "projectName": "ElDescontracturante.Excepciones",
+      "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj",
       "packagesPath": "C:\\Users\\cocho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\Dominio\\obj\\",
+      "outputPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\ElDescontracturante.Excepciones\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cocho\\AppData\\Roaming\\NuGet\\NuGet.Config",

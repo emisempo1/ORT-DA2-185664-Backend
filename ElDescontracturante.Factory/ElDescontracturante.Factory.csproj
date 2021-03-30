@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElDescontracturante.AccesoADatos\ElDescontracturante.AccesoADatos.csproj" />
+    <ProjectReference Include="..\ElDescontracturante.InterfazAccesoADatos\ElDescontracturante.InterfazAccesoADatos.csproj" />
+    <ProjectReference Include="..\ElDescontracturante.InterfazLogicaDominio\ElDescontracturante.InterfazLogicaDominio.csproj" />
+    <ProjectReference Include="..\ElDescontracturante.LogicaDominio\ElDescontracturante.LogicaDominio.csproj" />
+  </ItemGroup>
+
+</Project>

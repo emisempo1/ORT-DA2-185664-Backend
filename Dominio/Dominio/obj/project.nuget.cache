@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EQIAKh4Tkh5WTz8aufjGzBkDTKoXFnV5zBZjsCpyl+Qv1PrPZq72MMBTV78xVEwUkYLGNDsEa9qEbM9UEqNzcw==",
+  "dgSpecHash": "0FSF7uzd1Jie4OtXWVPWZjGF8P5iKFB9I2RojhjrX5LRs5aJaJtGejpV4p8nxFy4h2stf3TLyzvdxM47OAQ3+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\Dominio\\Dominio\\ElDescontracturante.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

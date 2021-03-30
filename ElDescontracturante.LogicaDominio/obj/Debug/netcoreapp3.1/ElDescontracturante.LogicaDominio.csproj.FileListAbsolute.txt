@@ -1,0 +1,16 @@
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csprojAssemblyReference.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.AssemblyInfoInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.AssemblyInfo.cs
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.deps.json
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazLogicaDominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazLogicaDominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csproj.CopyComplete
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.pdb
