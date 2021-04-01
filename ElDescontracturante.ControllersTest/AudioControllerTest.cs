@@ -22,14 +22,14 @@ namespace Controllers.Tests
     {
 
         Mock<ILogicaAudio> mock ;
-        AudioController controllerAudio;
+        AudiosController controllerAudio;
 
 
         [TestInitialize]
         public void Setup()
         { 
             mock = new Mock<ILogicaAudio>();
-            controllerAudio = new AudioController(mock.Object);
+            controllerAudio = new AudiosController(mock.Object);
         }
 
         [TestMethod]
@@ -83,7 +83,25 @@ namespace Controllers.Tests
             Assert.AreEqual(400, repuestaAAPIController);
 
     
-}
+        }
+
+
+
+        [TestMethod]
+        public void TestObetnerAudios()
+        {
+
+
+            ActionResult result = controllerAudio.ObtenerAudios();
+
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode; // <-- Cast is before using it.
+
+            Assert.AreEqual(400, repuestaAAPIController);
+
+
+        }
+
+
 
 
     }

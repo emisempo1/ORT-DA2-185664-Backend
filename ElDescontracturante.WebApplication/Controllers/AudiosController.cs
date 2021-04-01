@@ -12,11 +12,11 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AudioController : ControllerBase
+    public class AudiosController : ControllerBase
     {
       private readonly ILogicaAudio logicaAudio;
 
-        public AudioController(ILogicaAudio logicaAudio )
+        public AudiosController(ILogicaAudio logicaAudio )
         {
             this.logicaAudio = logicaAudio;
         }
@@ -44,6 +44,26 @@ namespace WebApplication1.Controllers
                
         }
 
-   
+        [HttpGet]
+        public ActionResult ObtenerAudios()
+        {
+            List<Audio> audios = new List<Audio>();
+           
+            try
+            {
+               audios =  this.logicaAudio.ObtenerAudios(); ;
+            }
+            catch (Excepciones.ExcepcionAudioDuplicado)
+            {
+                return BadRequest("Ya existe un Audio con Dicho Nombre");
+            }
+
+            return Ok(audios);
+
+        }
+
+
+
+
     }
 }

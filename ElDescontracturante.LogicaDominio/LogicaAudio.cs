@@ -20,5 +20,12 @@ namespace ElDescontracturante.LogicaDominio
         {
             audioRepositorio.Agregar(unAudio);
         }
+
+
+        public List<Audio> ObtenerAudios()
+        {
+            return audioRepositorio.ObtenerAudios();
+        }
+
     }
 }
