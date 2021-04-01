@@ -3,6 +3,7 @@ using ElDescontracturante.InterfazAccesoADatos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ElDescontracturante.AccesoADatos.Repositorios
@@ -36,7 +37,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
         public List<Audio> ObtenerAudios()
         {
-            throw new NotImplementedException();
+            return this.context.Set<Audio>().ToList();
         }
     }
 }

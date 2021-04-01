@@ -83,7 +83,25 @@ namespace Controllers.Tests
             Assert.AreEqual(400, repuestaAAPIController);
 
     
-}
+        }
+
+
+
+        [TestMethod]
+        public void TestObetnerAudios()
+        {
+
+
+            ActionResult result = controllerAudio.ObtenerAudios();
+
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode; // <-- Cast is before using it.
+
+            Assert.AreEqual(400, repuestaAAPIController);
+
+
+        }
+
+
 
 
     }

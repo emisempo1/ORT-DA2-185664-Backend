@@ -45,24 +45,20 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        public ActionResult ObtenerAudios(AudioModel Audiomodel)
+        public ActionResult ObtenerAudios()
         {
-            if (Audiomodel == null)
-            {
-                return BadRequest("Formato de JSON Incorrecto");
-            }
-            Audio Audio = new Audio();
+            List<Audio> audios = new List<Audio>();
+           
             try
             {
-                Audio = Audiomodel.ToEntity();
-                this.logicaAudio.Agregar(Audio);
+               audios =  this.logicaAudio.ObtenerAudios(); ;
             }
             catch (Excepciones.ExcepcionAudioDuplicado)
             {
                 return BadRequest("Ya existe un Audio con Dicho Nombre");
             }
 
-            return Ok("Se Agrego Correctamente");
+            return Ok(audios);
 
         }
 
