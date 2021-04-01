@@ -22,14 +22,14 @@ namespace Controllers.Tests
     {
 
         Mock<ILogicaAudio> mock ;
-        AudioController controllerAudio;
+        AudiosController controllerAudio;
 
 
         [TestInitialize]
         public void Setup()
         { 
             mock = new Mock<ILogicaAudio>();
-            controllerAudio = new AudioController(mock.Object);
+            controllerAudio = new AudiosController(mock.Object);
         }
 
         [TestMethod]

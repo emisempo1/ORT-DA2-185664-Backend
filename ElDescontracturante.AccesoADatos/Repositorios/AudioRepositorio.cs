@@ -34,9 +34,9 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             }
         }
 
-
-
-
-
+        public List<Audio> ObtenerAudios()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

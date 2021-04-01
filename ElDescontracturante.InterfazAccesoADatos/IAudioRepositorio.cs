@@ -8,5 +8,6 @@ namespace ElDescontracturante.InterfazAccesoADatos
     public interface IAudioRepositorio
     {
         void Agregar(Audio unAudio);
+        List<Audio> ObtenerAudios();
     }
 }

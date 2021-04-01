@@ -12,11 +12,11 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AudioController : ControllerBase
+    public class AudiosController : ControllerBase
     {
       private readonly ILogicaAudio logicaAudio;
 
-        public AudioController(ILogicaAudio logicaAudio )
+        public AudiosController(ILogicaAudio logicaAudio )
         {
             this.logicaAudio = logicaAudio;
         }
@@ -44,6 +44,30 @@ namespace WebApplication1.Controllers
                
         }
 
-   
+        [HttpGet]
+        public ActionResult ObtenerAudios(AudioModel Audiomodel)
+        {
+            if (Audiomodel == null)
+            {
+                return BadRequest("Formato de JSON Incorrecto");
+            }
+            Audio Audio = new Audio();
+            try
+            {
+                Audio = Audiomodel.ToEntity();
+                this.logicaAudio.Agregar(Audio);
+            }
+            catch (Excepciones.ExcepcionAudioDuplicado)
+            {
+                return BadRequest("Ya existe un Audio con Dicho Nombre");
+            }
+
+            return Ok("Se Agrego Correctamente");
+
+        }
+
+
+
+
     }
 }
