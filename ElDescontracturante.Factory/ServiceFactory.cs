@@ -22,6 +22,9 @@ namespace Factory
             services.AddScoped<IAudioRepositorio, AudioRepositorio>();
             services.AddScoped<ILogicaAudio, LogicaAudio>();
 
+            services.AddScoped<IPlaylistRepositorio, PlaylistRepositorio>();
+            services.AddScoped<ILogicaPlaylist, LogicaPlayList>();
+
         }
 
         public void AddDbContextService()

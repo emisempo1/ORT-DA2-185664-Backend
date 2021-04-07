@@ -14,20 +14,20 @@ namespace Controllers.Tests
 {
 
 
- 
+
 
 
     [TestClass]
     public class AudioControllerTest
     {
 
-        Mock<ILogicaAudio> mock ;
+        Mock<ILogicaAudio> mock;
         AudiosController controllerAudio;
 
 
         [TestInitialize]
         public void Setup()
-        { 
+        {
             mock = new Mock<ILogicaAudio>();
             controllerAudio = new AudiosController(mock.Object);
         }
@@ -37,17 +37,17 @@ namespace Controllers.Tests
         {
             var unidaddeTiempo = (ElDescontracturante.Dominio.Audio.UnidadTiempo)Enum.Parse(typeof(ElDescontracturante.Dominio.Audio.UnidadTiempo), "Minuto");
 
-           
+
 
 
             AudioModel audioModel = new AudioModel()
             {
-                 Nombre= "Soltero Hasta la Tumba",
-                 Duracion=4,
-                 UnidadDeTiempo =  "Minuto",
-                 NombreCreador = "El Reja",
-                 UrlImagen = "ElRejaSolteroHastaLaTumba.jpg",
-                 UrlMp3 = "ElRejaSolteroHastaLaTumba.mp3"
+                Nombre = "Soltero Hasta la Tumba",
+                Duracion = 4,
+                UnidadDeTiempo = "Minuto",
+                NombreCreador = "El Reja",
+                UrlImagen = "ElRejaSolteroHastaLaTumba.jpg",
+                UrlMp3 = "ElRejaSolteroHastaLaTumba.mp3"
             };
 
             ActionResult result = controllerAudio.AgregarAudio(audioModel);
@@ -57,32 +57,32 @@ namespace Controllers.Tests
             Assert.AreEqual(200, repuestaAAPIController);
 
         }
-    
 
 
 
-    [TestMethod]
-    public void TestAgregarAudioMalUnidadDeTiempo()
-    {
-        var unidaddeTiempo = (ElDescontracturante.Dominio.Audio.UnidadTiempo)Enum.Parse(typeof(ElDescontracturante.Dominio.Audio.UnidadTiempo), "Minuto");
 
-        AudioModel audioModel = new AudioModel()
+        [TestMethod]
+        public void TestAgregarAudioMalUnidadDeTiempo()
         {
-            Nombre = "Soltero Hasta la Tumba",
-            Duracion = 4,
-            UnidadDeTiempo = "Joule",
-            NombreCreador = "El Reja",
-            UrlImagen = "ElRejaSolteroHastaLaTumba.jpg",
-            UrlMp3 = "ElRejaSolteroHastaLaTumba.mp3"
-        };
+            var unidaddeTiempo = (ElDescontracturante.Dominio.Audio.UnidadTiempo)Enum.Parse(typeof(ElDescontracturante.Dominio.Audio.UnidadTiempo), "Minuto");
 
-        ActionResult result = controllerAudio.AgregarAudio(audioModel);
+            AudioModel audioModel = new AudioModel()
+            {
+                Nombre = "Soltero Hasta la Tumba",
+                Duracion = 4,
+                UnidadDeTiempo = "Joule",
+                NombreCreador = "El Reja",
+                UrlImagen = "ElRejaSolteroHastaLaTumba.jpg",
+                UrlMp3 = "ElRejaSolteroHastaLaTumba.mp3"
+            };
+
+            ActionResult result = controllerAudio.AgregarAudio(audioModel);
 
             var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode; // <-- Cast is before using it.
 
             Assert.AreEqual(400, repuestaAAPIController);
 
-    
+
         }
 
 

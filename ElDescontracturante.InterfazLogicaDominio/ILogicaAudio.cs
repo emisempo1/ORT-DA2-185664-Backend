@@ -10,6 +10,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
 
         public List<Audio> ObtenerAudios();
 
+        List<Audio> ObtenerAudios(string[] nombre);
+
     }
 
 }

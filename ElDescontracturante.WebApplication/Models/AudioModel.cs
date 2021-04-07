@@ -47,6 +47,20 @@ namespace WebApplication1.Models
             return audio;
         }
 
+        public List<Audio> ListToEntity(List<AudioModel> listaAudiosModel)
+        {
+            List<Audio> listaAudios = new List<Audio>();
+
+            for (int i = 0; i < listaAudiosModel.Count; i++)
+            {
+                listaAudios.Add(listaAudiosModel[i].ToEntity());
+            }
+
+            return listaAudios;
+        }
+
+
+
         public AudioModel()
         {
         }

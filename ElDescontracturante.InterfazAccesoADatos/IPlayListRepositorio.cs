@@ -5,10 +5,9 @@ using System.Text;
 
 namespace ElDescontracturante.InterfazAccesoADatos
 {
-    public interface IAudioRepositorio
+    public interface IPlaylistRepositorio
     {
-        void Agregar(Audio unAudio);
-        List<Audio> ObtenerAudios();
-        List<Audio> ObtenerAudios(string[] nombre);
+        void Agregar(Playlist unaPlaylist);
+        List<Playlist> ObtenerPlaylist();
     }
 }
