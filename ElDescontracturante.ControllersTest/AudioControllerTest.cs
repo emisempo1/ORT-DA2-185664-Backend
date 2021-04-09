@@ -94,9 +94,10 @@ namespace Controllers.Tests
 
             ActionResult result = controllerAudio.ObtenerAudios();
 
-            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode; // <-- Cast is before using it.
 
-            Assert.AreEqual(400, repuestaAAPIController);
+            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
+
+            Assert.AreEqual(200, repuestaAAPIController);
 
 
         }

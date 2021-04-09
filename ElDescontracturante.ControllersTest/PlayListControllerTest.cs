@@ -59,9 +59,25 @@ namespace Controllers.Tests
         }
 
 
+        [TestMethod]
+        public void TestObtenerPlaylist()
+        {
+           
+            ActionResult result = controllerPlaylist.Obtenerplaylists();
+
+            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
+
+            Assert.AreEqual(200, repuestaAAPIController);
 
 
-      
+        }
+
+
+
+
+
+
+
 
 
 
