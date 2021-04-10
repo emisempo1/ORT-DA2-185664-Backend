@@ -36,8 +36,6 @@ namespace ElDescontracturante.LogicaDominioTest
         }
 
 
-
-
         [TestMethod]
         public void TestAñadirPlaylist()
         {
@@ -45,15 +43,12 @@ namespace ElDescontracturante.LogicaDominioTest
             var result = logicaPlaylist.Obtenerplaylists();
             mock.VerifyAll();
             Assert.AreEqual(playlist, result[0]);
-
         }
-
 
 
         [TestMethod]
         public void TestObtenerPlaylist()
         {
-
             var result = logicaPlaylist.Obtenerplaylists();
             mock.VerifyAll();
             Assert.AreEqual(playlists, result);

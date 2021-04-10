@@ -43,21 +43,14 @@ namespace ElDescontracturante.LogicaDominioTest
             };
 
             Mock<IAudioRepositorio> mock = new Mock<IAudioRepositorio>();
-
             List<Audio> audios = new List<Audio>();
-
             audios.Add(audio);
-
             mock.Setup(m => m.ObtenerAudios()).Returns(audios);
-
             logicaAudio = new LogicaAudio(mock.Object);
 
             logicaAudio.Agregar(audio);
-
             var result = logicaAudio.ObtenerAudios();
-
             mock.VerifyAll();
-
             Assert.AreEqual(audio, result[0]);
         }
 
@@ -80,19 +73,12 @@ namespace ElDescontracturante.LogicaDominioTest
             };
 
             Mock<IAudioRepositorio> mock = new Mock<IAudioRepositorio>();
-
             List<Audio> audios = new List<Audio>();
-
             audios.Add(audio);
-
             mock.Setup(m => m.ObtenerAudios()).Returns(audios);
-
             logicaAudio = new LogicaAudio(mock.Object);
-
             var result = logicaAudio.ObtenerAudios();
-
             mock.VerifyAll();
-
             Assert.AreEqual(audios, result);
         }
 

@@ -25,6 +25,8 @@ namespace WebApplication1.Models
 
         public string Descripcion { get; set; }
 
+        public string Url { get; set; }
+
         public string[] ListaAudio { get; set; }
 
   
@@ -41,6 +43,7 @@ namespace WebApplication1.Models
             {
                 playlist.Nombre = this.Nombre;
                 playlist.Descripcion = this.Descripcion;
+                playlist.Url = this.Url;
       
             }
             catch (System.ArgumentException)
