@@ -23,6 +23,15 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             try
             {
                 this.context.Add(unaPlaylist);
+
+                for (int i = 0; i < unaPlaylist.ListaAudios.Count; i++)
+                {
+                    Playlist_Audio playlistAudio = new Playlist_Audio();
+                    playlistAudio.NombrePlaylist = unaPlaylist.Nombre;
+                    playlistAudio.NombreAudio = unaPlaylist.ListaAudios[i].Nombre;
+                    this.context.Add(playlistAudio);            
+                }
+               
                 this.context.SaveChanges();
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException)

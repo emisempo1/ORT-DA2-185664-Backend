@@ -3,14 +3,16 @@ using ElDescontracturante.AccesoADatos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ElDescontracturante.AccesoADatos.Migrations
 {
     [DbContext(typeof(ElDescontracturanteContext))]
-    partial class ElDescontracturanteContextModelSnapshot : ModelSnapshot
+    [Migration("20210411140300_2")]
+    partial class _2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,19 +69,6 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.HasKey("Nombre");
 
                     b.ToTable("Playlists");
-                });
-
-            modelBuilder.Entity("ElDescontracturante.Dominio.Playlist_Audio", b =>
-                {
-                    b.Property<string>("NombrePlaylist")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("NombreAudio")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("NombrePlaylist", "NombreAudio");
-
-                    b.ToTable("Playlist_Audio");
                 });
 #pragma warning restore 612, 618
         }

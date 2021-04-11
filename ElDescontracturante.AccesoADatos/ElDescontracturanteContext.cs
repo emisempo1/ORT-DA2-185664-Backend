@@ -27,6 +27,10 @@ namespace ElDescontracturante.AccesoADatos
 
             modelBuilder.Entity<Playlist>()
                 .HasKey(c => c.Nombre);
+
+            modelBuilder.Entity<Playlist_Audio>()
+               .HasKey(c => new { c.NombrePlaylist,c.NombreAudio});
+
         }
 
 
