@@ -1,10 +1,19 @@
-﻿using System;
+﻿using ElDescontracturante.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ElDescontracturante.InterfazLogicaDominio
 {
-    class ILogicaCategoria
+   public interface ILogicaCategoria
     {
+        public void AgregarPlaylist(Categoria unaCategoria);
+
+        Categoria ObtenerCategoria(string nombre);
+
+
+
+
+
     }
 }

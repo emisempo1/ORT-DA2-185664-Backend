@@ -12,6 +12,11 @@ namespace ElDescontracturante.AccesoADatos
 
         public DbSet<Playlist> Playlists { get; set; }
 
+        public DbSet<Playlist_Audio> Playlists_Audio { get; set; }
+
+        public DbSet<Categoria_Playlist> Categoria_Playlist { get; set; }
+
+
         public ElDescontracturanteContext() { }
 
 
@@ -30,6 +35,9 @@ namespace ElDescontracturante.AccesoADatos
 
             modelBuilder.Entity<Playlist_Audio>()
                .HasKey(c => new { c.NombrePlaylist,c.NombreAudio});
+
+            modelBuilder.Entity<Categoria_Playlist>()
+              .HasKey(c => new { c.Categoria, c.NombrePlaylist });
 
         }
 

@@ -25,6 +25,10 @@ namespace Factory
             services.AddScoped<IPlaylistRepositorio, PlaylistRepositorio>();
             services.AddScoped<ILogicaPlaylist, LogicaPlayList>();
 
+            services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
+            services.AddScoped<ILogicaCategoria, LogicaCategoria>();
+            
+
         }
 
         public void AddDbContextService()

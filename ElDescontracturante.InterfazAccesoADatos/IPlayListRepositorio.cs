@@ -9,5 +9,7 @@ namespace ElDescontracturante.InterfazAccesoADatos
     {
         void Agregar(Playlist unaPlaylist);
         List<Playlist> ObtenerPlaylist();
+
+        List<Playlist> ObtenerPlaylist(string[] nombre);
     }
 }

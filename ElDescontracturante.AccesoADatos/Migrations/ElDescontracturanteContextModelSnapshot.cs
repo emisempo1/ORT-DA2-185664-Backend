@@ -53,6 +53,19 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.ToTable("Categorias");
                 });
 
+            modelBuilder.Entity("ElDescontracturante.Dominio.Categoria_Playlist", b =>
+                {
+                    b.Property<int>("Categoria")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NombrePlaylist")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Categoria", "NombrePlaylist");
+
+                    b.ToTable("Categoria_Playlist");
+                });
+
             modelBuilder.Entity("ElDescontracturante.Dominio.Playlist", b =>
                 {
                     b.Property<string>("Nombre")
@@ -79,7 +92,7 @@ namespace ElDescontracturante.AccesoADatos.Migrations
 
                     b.HasKey("NombrePlaylist", "NombreAudio");
 
-                    b.ToTable("Playlist_Audio");
+                    b.ToTable("Playlists_Audio");
                 });
 #pragma warning restore 612, 618
         }

@@ -49,5 +49,36 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
         {
             return this.context.Set<Playlist>().ToList();
         }
+
+        public List<Playlist> ObtenerPlaylist(string[] nombres)
+        {
+            bool encontro = false;
+            List<Playlist> listaplaylists = this.context.Set<Playlist>().ToList();
+            List<Playlist> listaplaylistsARetornar = new List<Playlist>();
+
+            for (int i = 0; i < nombres.Length; i++)
+            {
+                encontro = false;
+
+                for (int j = 0; j < listaplaylists.Count; j++)
+                {
+                    if (nombres[i].Equals(listaplaylists[j].Nombre))
+                    {
+                        listaplaylistsARetornar.Add(listaplaylists[j]);
+                        encontro = true;
+                    }
+                }
+
+                if (!encontro)
+                {
+                    throw new Excepciones.ExcepcionPlaylistInexistente(nombres[i]);
+                }
+
+            }
+
+            return listaplaylistsARetornar;
+        }
+
+
     }
 }

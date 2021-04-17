@@ -20,6 +20,10 @@ namespace ElDescontracturante.LogicaDominio
             playlistRepositorio.Agregar(unplaylist);
         }
 
+        public List<Playlist> ObtenerPlaylist(string[] nombre)
+        {
+            return playlistRepositorio.ObtenerPlaylist(nombre);
+        }
 
         public List<Playlist> Obtenerplaylists()
         {

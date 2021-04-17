@@ -10,8 +10,6 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplicati
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csprojAssemblyReference.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.AssemblyInfoInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.AssemblyInfo.cs
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csproj.CoreCompileInputs.cache
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.RazorTargetAssemblyInfo.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\ElDescontracturante.WebApplication.StaticWebAssets.Manifest.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\ElDescontracturante.WebApplication.StaticWebAssets.xml
@@ -73,3 +71,5 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplicati
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.MvcApplicationPartsAssemblyInfo.cache
