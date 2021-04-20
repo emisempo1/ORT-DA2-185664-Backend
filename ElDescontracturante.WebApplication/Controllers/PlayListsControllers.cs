@@ -46,16 +46,25 @@ namespace WebApplication1.Controllers
             }
             catch (ExcepcionPlaylistDuplicado e)
             {
-                return BadRequest(e.Message);
+                return Conflict(e.Message);
             }
             catch(Excepciones.ExcepcionAudioInexistente e)
             {
-             return BadRequest(e.Message);
+                return NotFound(e.Message);
             }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            return Created("api/[controller]", playlist);
 
-            return Ok("Se Agrego Correctamente");
-               
+
         }
+
+
+
+
+
 
         [HttpGet]
         public ActionResult Obtenerplaylists()
@@ -66,9 +75,9 @@ namespace WebApplication1.Controllers
             {
                playlists =  this.logicaPlaylist.Obtenerplaylists(); ;
             }
-            catch (ExcepcionPlaylistDuplicado)
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
-                return BadRequest("Ya existe un playlist con Dicho Nombre");
+                return StatusCode(500, e.Message);
             }
 
             return Ok(playlists);

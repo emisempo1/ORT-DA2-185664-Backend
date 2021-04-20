@@ -38,7 +38,7 @@ namespace ElDescontracturante.AccesoADatos
 
             modelBuilder.Entity<Categoria_Playlist>()
               .HasKey(c => new { c.Categoria, c.NombrePlaylist });
-
+       
         }
 
 

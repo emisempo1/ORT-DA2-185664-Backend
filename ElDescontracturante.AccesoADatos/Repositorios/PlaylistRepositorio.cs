@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ElDescontracturante.AccesoADatos.Repositorios
 {
-    public class PlaylistRepositorio:IPlaylistRepositorio
+    public class PlaylistRepositorio : IPlaylistRepositorio
     {
         private readonly DbContext context;
 
@@ -29,9 +29,9 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
                     Playlist_Audio playlistAudio = new Playlist_Audio();
                     playlistAudio.NombrePlaylist = unaPlaylist.Nombre;
                     playlistAudio.NombreAudio = unaPlaylist.ListaAudios[i].Nombre;
-                    this.context.Add(playlistAudio);            
+                    this.context.Add(playlistAudio);
                 }
-               
+
                 this.context.SaveChanges();
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException)
@@ -51,29 +51,33 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
         }
 
         public List<Playlist> ObtenerPlaylist(string[] nombres)
+
         {
             bool encontro = false;
-            List<Playlist> listaplaylists = this.context.Set<Playlist>().ToList();
             List<Playlist> listaplaylistsARetornar = new List<Playlist>();
-
-            for (int i = 0; i < nombres.Length; i++)
+            try
             {
-                encontro = false;
-
-                for (int j = 0; j < listaplaylists.Count; j++)
+                List<Playlist> listaplaylists = this.context.Set<Playlist>().ToList();
+                for (int i = 0; i < nombres.Length; i++)
                 {
-                    if (nombres[i].Equals(listaplaylists[j].Nombre))
+                    encontro = false;
+                    for (int j = 0; j < listaplaylists.Count; j++)
                     {
-                        listaplaylistsARetornar.Add(listaplaylists[j]);
-                        encontro = true;
+                        if (nombres[i].Equals(listaplaylists[j].Nombre))
+                        {
+                            listaplaylistsARetornar.Add(listaplaylists[j]);
+                            encontro = true;
+                        }
+                    }
+                    if (!encontro)
+                    {
+                        throw new Excepciones.ExcepcionPlaylistInexistente(nombres[i]);
                     }
                 }
-
-                if (!encontro)
-                {
-                    throw new Excepciones.ExcepcionPlaylistInexistente(nombres[i]);
-                }
-
+            }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
             }
 
             return listaplaylistsARetornar;

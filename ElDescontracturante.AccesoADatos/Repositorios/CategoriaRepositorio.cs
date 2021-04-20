@@ -11,7 +11,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
     public class CategoriaRepositorio : ICategoriaRepositorio
     {
         private readonly DbContext context;
-        
+
 
         public CategoriaRepositorio(DbContext context)
         {
@@ -24,7 +24,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
             try
             {
-    
+
                 cp.Categoria = unaCategoria.NombreCategoria;
 
                 for (int i = 0; i < unaCategoria.ListaPlaylist.Count; i++)
@@ -33,7 +33,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
                     this.context.Add(cp);
                     this.context.SaveChanges();
                 }
-                        
+
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException)
             {
@@ -43,25 +43,33 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
         public Categoria ObtenerCategoria(string nombre)
         {
-            var nomCategoria = (ElDescontracturante.Dominio.Categoria.NomCategoria)Enum.Parse(typeof(ElDescontracturante.Dominio.Categoria.NomCategoria), nombre);
-
-            List<Categoria_Playlist> listaCategoriaPlaylists = this.context.Set<Categoria_Playlist>().ToList();
-
-            List<string> nombresPlaylist = new List<string>();
-
-            for (int i = 0; i < listaCategoriaPlaylists.Count; i++)
+            Categoria categoria;
+            try
             {
-                if (listaCategoriaPlaylists[i].Categoria == nomCategoria)
+                var nomCategoria = (ElDescontracturante.Dominio.Categoria.NomCategoria)Enum.Parse(typeof(ElDescontracturante.Dominio.Categoria.NomCategoria), nombre);
+                List<Categoria_Playlist> listaCategoriaPlaylists = this.context.Set<Categoria_Playlist>().ToList();
+                List<string> nombresPlaylist = new List<string>();
+
+                for (int i = 0; i < listaCategoriaPlaylists.Count; i++)
                 {
-                    nombresPlaylist.Add(listaCategoriaPlaylists[i].NombrePlaylist);
+                    if (listaCategoriaPlaylists[i].Categoria == nomCategoria)
+                    {
+                        nombresPlaylist.Add(listaCategoriaPlaylists[i].NombrePlaylist);
+                    }
                 }
+
+                PlaylistRepositorio playlistRepositorio = new PlaylistRepositorio(context);
+                List<Playlist> listaPlaylist = playlistRepositorio.ObtenerPlaylist(nombresPlaylist.ToArray());
+                categoria = new Categoria(nomCategoria, listaPlaylist);
             }
-
-            PlaylistRepositorio playlistRepositorio = new PlaylistRepositorio(context);
-
-            List<Playlist> listaPlaylist = playlistRepositorio.ObtenerPlaylist(nombresPlaylist.ToArray());
-
-            Categoria categoria = new Categoria(nomCategoria, listaPlaylist);
+            catch (System.ArgumentException)
+            {
+                throw new Excepciones.ExcepcionNombreCategoriaIncorrecta();
+            }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
+            }
 
             return categoria;
         }
@@ -70,4 +78,3 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
     }
 }
- 

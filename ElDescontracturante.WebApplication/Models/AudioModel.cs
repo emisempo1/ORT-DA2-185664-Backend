@@ -41,7 +41,7 @@ namespace WebApplication1.Models
             }
             catch (System.ArgumentException)
             {
-                throw new Excepciones.ExcepcionAudioDuplicado();
+                throw new Excepciones.ExcepcionUnidadDeTiempoDesconocida();
             }
 
             return audio;

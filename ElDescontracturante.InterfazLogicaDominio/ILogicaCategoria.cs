@@ -7,7 +7,7 @@ namespace ElDescontracturante.InterfazLogicaDominio
 {
    public interface ILogicaCategoria
     {
-        public void AgregarPlaylist(Categoria unaCategoria);
+        public void AgregarPlaylistsACategoria(Categoria unaCategoria);
 
         Categoria ObtenerCategoria(string nombre);
 

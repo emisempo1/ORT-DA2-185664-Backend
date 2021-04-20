@@ -35,12 +35,22 @@ namespace WebApplication1.Controllers
                 Audio = Audiomodel.ToEntity();
                 this.logicaAudio.Agregar(Audio);
             }
-            catch (Excepciones.ExcepcionAudioDuplicado)
+            catch (Excepciones.ExcepcionAudioDuplicado e)
             {
-                return BadRequest("Ya existe un Audio con Dicho Nombre");
+                return Conflict(e.Message);
+            }
+            catch (Excepciones.ExcepcionUnidadDeTiempoDesconocida e)
+            {
+                return NotFound(e.Message);
+            }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500, e.Message);
             }
 
-            return Ok("Se Agrego Correctamente");
+            return Created("api/[controller]", Audio);
+
+           
                
         }
 
@@ -56,9 +66,9 @@ namespace WebApplication1.Controllers
             {
                audios =  this.logicaAudio.ObtenerAudios(); ;
             }
-            catch (Excepciones.ExcepcionAudioDuplicado)
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
-                return BadRequest("Ya existe un Audio con Dicho Nombre");
+                return StatusCode(500, e.Message);
             }
 
             return Ok(audios);

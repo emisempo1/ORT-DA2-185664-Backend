@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
 using ElDescontracturante.LogicaDominio;
+using Newtonsoft.Json;
 
 namespace WebApplication1.Controllers
 {
@@ -39,7 +40,7 @@ namespace WebApplication1.Controllers
             {
                 categoria = categoriaModel.ToEntity();
                 categoria.ListaPlaylist = logicaPlaylist.ObtenerPlaylist(categoriaModel.ListaPlaylist);
-                this.logicaCategoria.AgregarPlaylist(categoria);
+                this.logicaCategoria.AgregarPlaylistsACategoria(categoria);
             }
             catch (Excepciones.ExcepcionNombreCategoriaIncorrecta e)
             {
@@ -53,12 +54,47 @@ namespace WebApplication1.Controllers
             {
                 return Conflict(e.Message);
             }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500,e.Message);
+            }
 
             return Created("api/[controller]",categoria);
                
         }
 
-       
+
+        [HttpGet]
+        public ActionResult ObtenerCategoria(string nombre)
+        {
+
+            if (nombre == null)
+            {
+                return BadRequest("Query Param Incorrecto");
+            }
+
+            Categoria categoria = new Categoria();
+
+            try
+            {
+                categoria = this.logicaCategoria.ObtenerCategoria(nombre); 
+            }
+            catch (Excepciones.ExcepcionNombreCategoriaIncorrecta e)
+            {
+                return NotFound(e.Message);
+            }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500, e.Message);
+            }
+
+           
+            return Ok(JsonConvert.SerializeObject(categoria));
+
+        }
+
+
+
 
 
 

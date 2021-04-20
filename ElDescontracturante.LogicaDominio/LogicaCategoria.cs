@@ -16,7 +16,7 @@ namespace ElDescontracturante.LogicaDominio
             this.categoriaRepositorio = logicaCategoria;
         }
 
-        public void AgregarPlaylist(Categoria unaCategoria)
+        public void AgregarPlaylistsACategoria(Categoria unaCategoria)
         {
          categoriaRepositorio.AgregarPlaylistsACategoria(unaCategoria);
         }
