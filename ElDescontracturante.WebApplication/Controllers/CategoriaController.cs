@@ -10,10 +10,14 @@ using WebApplication1.Models;
 using ElDescontracturante.LogicaDominio;
 using Newtonsoft.Json;
 
+
 namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+   
+
+
     public class CategoriaController : ControllerBase
     {
       private readonly ILogicaCategoria logicaCategoria;

@@ -14,17 +14,16 @@ namespace Controllers.Tests
 {
 
 
-
-
-
     [TestClass]
-    public class PlaylistControllerTest
+    public class CategoriaControllerTest
     {
-
         Mock<ILogicaPlaylist> mockPlaylist;
         Mock<ILogicaAudio> mockAudio;
 
+        Mock<ILogicaCategoria> mockCategoria;
+
         PlayListsController controllerPlaylist;
+        CategoriaController controllerCategoria;
 
 
         [TestInitialize]
@@ -32,27 +31,30 @@ namespace Controllers.Tests
         {
             mockPlaylist = new Mock<ILogicaPlaylist>();
             mockAudio = new Mock<ILogicaAudio>();
-            controllerPlaylist = new PlayListsController(mockPlaylist.Object,mockAudio.Object);
+            mockCategoria = new Mock<ILogicaCategoria>();
+
+            controllerPlaylist = new PlayListsController(mockPlaylist.Object, mockAudio.Object);
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
         }
 
+
         [TestMethod]
-        public void TestAagregarPlaylistOk()
+        public void TestAagregarPlaylistAACategoriaOk()
         {
 
 
-            PlaylistModel playlistModel = new PlaylistModel()
+            CategoriaModel categoriaModel = new CategoriaModel()
             {
-                Nombre = "Cachengue",
-                Descripcion = "Para Escabiar y pasarla bien con tus panas",
-                ListaAudio = new string[] { "Soltero Hasta la Tumba", "Con Altura" }
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
              
 
             };
 
 
-            ActionResult result = controllerPlaylist.Agregarplaylist(playlistModel);
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
 
-            var repuestaAAPIController = ((CreatedResult)result).StatusCode; // <-- Cast is before using it.
+            var repuestaAAPIController = ((CreatedResult)result).StatusCode;
 
             Assert.AreEqual(201, repuestaAAPIController);
 
@@ -60,10 +62,10 @@ namespace Controllers.Tests
 
 
         [TestMethod]
-        public void TestObtenerPlaylist()
+        public void TestObtenerCategoria()
         {
            
-            ActionResult result = controllerPlaylist.Obtenerplaylists();
+            ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
 
             var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
 

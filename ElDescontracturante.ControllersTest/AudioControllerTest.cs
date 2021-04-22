@@ -52,9 +52,9 @@ namespace Controllers.Tests
 
             ActionResult result = controllerAudio.AgregarAudio(audioModel);
 
-            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
+            var repuestaAAPIController = ((CreatedResult)result).StatusCode; // <-- Cast is before using it.
 
-            Assert.AreEqual(200, repuestaAAPIController);
+            Assert.AreEqual(201, repuestaAAPIController);
 
         }
 
@@ -78,9 +78,9 @@ namespace Controllers.Tests
 
             ActionResult result = controllerAudio.AgregarAudio(audioModel);
 
-            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode; // <-- Cast is before using it.
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode; // <-- Cast is before using it.
 
-            Assert.AreEqual(400, repuestaAAPIController);
+            Assert.AreEqual(404, repuestaAAPIController);
 
 
         }
