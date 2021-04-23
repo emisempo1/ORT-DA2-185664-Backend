@@ -4,10 +4,10 @@ using System.Runtime.Serialization;
 namespace Excepciones
 {
     [Serializable]
-    public class ExcepcionAudioDuplicado : ExcepcionGenerica
+    public class ExcepcionAdministradorDuplicado : ExcepcionGenerica
     {
-        public const string message = "Ya dicho Audio";
-        public ExcepcionAudioDuplicado(string msg = message) : base(msg) { }
+        public const string message = "Ya existe dicho Administrador";
+        public ExcepcionAdministradorDuplicado(string msg = message) : base(msg) { }
 
     }
 }

@@ -1550,6 +1550,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "ElDescontracturante.AccesoADatos": "1.0.0",
           "ElDescontracturante.InterfazAccesoADatos": "1.0.0",
           "ElDescontracturante.InterfazLogicaDominio": "1.0.0"
         },

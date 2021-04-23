@@ -423,6 +423,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.AccesoADatos\\ElDescontracturante.AccesoADatos.csproj": {
+                "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.AccesoADatos\\ElDescontracturante.AccesoADatos.csproj"
+              },
               "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj": {
                 "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj"
               },
