@@ -5,10 +5,11 @@ using System.Text;
 
 namespace ElDescontracturante.InterfazAccesoADatos
 {
-    public interface IAudioRepositorio
+    public interface IAdministradorRepositorio
     {
-        void Agregar(Audio unAudio);
-        List<Audio> ObtenerAudios();
-        List<Audio> ObtenerAudios(string[] nombre);
+        void Agregar(Administrador unAdministrador);
+
+        List<Administrador> Obtener();
+      
     }
 }

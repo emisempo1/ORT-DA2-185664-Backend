@@ -39,6 +39,10 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             {
                 throw new Excepciones.ExcepcionPlaylistYaAsociadaACategoria(cp.Categoria.ToString(), cp.NombrePlaylist);
             }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
+            }
         }
 
         public Categoria ObtenerCategoria(string nombre)

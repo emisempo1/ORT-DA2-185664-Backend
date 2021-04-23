@@ -4,7 +4,11 @@ using System.Text;
 
 namespace ElDescontracturante.Dominio
 {
-    class Administrador
+    public class Administrador
     {
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+
     }
 }

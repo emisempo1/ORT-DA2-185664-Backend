@@ -23,6 +23,8 @@ namespace ElDescontracturante.LogicaDominioTest
         [TestInitialize]
         public void initialize()
         {
+            Categoria = new Categoria();
+            playlist = new Playlist();
             Categoria.NombreCategoria = (ElDescontracturante.Dominio.Categoria.NomCategoria)Enum.Parse(typeof(ElDescontracturante.Dominio.Categoria.NomCategoria), "Dormir");
             playlist.Nombre = "Cachengue";
             playlist.Descripcion = "Para Escabiar y pasarla bien con tus panas";
@@ -57,7 +59,7 @@ namespace ElDescontracturante.LogicaDominioTest
         {
             var result = logicaCategoria.ObtenerCategoria("Dormir");
             mock.VerifyAll();
-            Assert.AreEqual(Categorias, result);
+            Assert.AreEqual(Categorias[0], result);
         }
 
 
