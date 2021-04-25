@@ -53,36 +53,6 @@ namespace WebApplication1.Controllers
 
 
 
-        [HttpGet]
-        public ActionResult ObtenerAdministrador(string email, string password)
-        {
-
-            if (email == null | password == null)
-            {
-                return BadRequest("Query Param Incorrecto");
-            }
-
-           Administrador administrador = new Administrador();
-
-
-            try
-            {
-                administrador = logicaAdministrador.Obtener(email, password);
-            }
-            catch (Excepciones.ExcepcionAdministradorInexistente e)
-            {
-                return NotFound(e.Message);
-            }
-            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
-            {
-                return StatusCode(500, e.Message);
-            }
-
-
-            return Ok(administrador);
-
-        }
-
 
 
 

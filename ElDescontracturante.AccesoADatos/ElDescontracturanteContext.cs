@@ -16,6 +16,8 @@ namespace ElDescontracturante.AccesoADatos
 
         public DbSet<Categoria_Playlist> Categoria_Playlist { get; set; }
 
+        public DbSet<Token> Tokens { get; set; }
+
 
         public ElDescontracturanteContext() { }
 
@@ -32,6 +34,9 @@ namespace ElDescontracturante.AccesoADatos
 
             modelBuilder.Entity<Playlist>()
                 .HasKey(c => c.Nombre);
+
+            modelBuilder.Entity<Token>()
+               .HasKey(c => c.Id);
 
             modelBuilder.Entity<Playlist_Audio>()
                .HasKey(c => new { c.NombrePlaylist,c.NombreAudio});
