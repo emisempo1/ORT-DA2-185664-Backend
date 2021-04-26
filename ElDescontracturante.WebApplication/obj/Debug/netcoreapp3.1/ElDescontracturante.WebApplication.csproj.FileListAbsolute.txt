@@ -71,5 +71,7 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplicati
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.csproj.CoreCompileInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.MvcApplicationPartsAssemblyInfo.cache

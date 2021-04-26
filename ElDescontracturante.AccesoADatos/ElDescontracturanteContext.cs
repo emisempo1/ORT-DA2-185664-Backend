@@ -38,6 +38,9 @@ namespace ElDescontracturante.AccesoADatos
             modelBuilder.Entity<Token>()
                .HasKey(c => c.Id);
 
+            modelBuilder.Entity<Administrador>()
+              .HasKey(c => c.Email);
+
             modelBuilder.Entity<Playlist_Audio>()
                .HasKey(c => new { c.NombrePlaylist,c.NombreAudio});
 

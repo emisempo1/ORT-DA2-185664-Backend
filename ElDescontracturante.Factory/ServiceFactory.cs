@@ -27,7 +27,13 @@ namespace Factory
 
             services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
             services.AddScoped<ILogicaCategoria, LogicaCategoria>();
-            
+
+            services.AddScoped<IAdministradorRepositorio, AdministradorRepositorio>();
+            services.AddScoped<ILogicaAdministrador, LogicaAdministrador>();
+
+            services.AddScoped<ITokenRepositorio, TokenRepositorio>();
+            services.AddScoped<ILogicaLogin, LogicaLogin>();
+
 
         }
 

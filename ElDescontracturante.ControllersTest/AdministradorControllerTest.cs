@@ -46,7 +46,7 @@ namespace Controllers.Tests
 
                 mock = new Mock<ILogicaAdministrador>();
                 mock.Setup(m => m.Agregar(administrador));
-                mock.Setup(m => m.Obtener()).Returns(administradores);
+                mock.Setup(m => m.Obtener(administrador.Email, administrador.Password)).Returns(administrador);
                 controllerAdministrador = new AdministradorController(mock.Object);
                 
 
@@ -68,13 +68,6 @@ namespace Controllers.Tests
         }
 
 
-        [TestMethod]
-        public void TestObtenerPlaylist()
-        {
-            ActionResult result = controllerAdministrador.ObtenerAdministradores();
-            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; 
-            Assert.AreEqual(200, repuestaAAPIController);
-        }
 
 
 
@@ -86,5 +79,6 @@ namespace Controllers.Tests
 
 
     }
-
+    }
 }
+

@@ -14,14 +14,19 @@ namespace WebApplication1.Controllers
     [Route("api/[controller]")]
     public class LoginController : ControllerBase
     {
- 
-     private readonly ILogicaLogin logicaLogin;
+        private readonly ILogicaAdministrador logicaAdministrador;
+        private readonly ILogicaLogin logicaLogin;
 
-        public LoginController(ILogicaAdministrador logicaAdministrador , ILogicaLogin logicaLogin)
+   
+
+        public LoginController(ILogicaLogin logicaLogin, ILogicaAdministrador logicaAdministrador)
         {
   
             this.logicaLogin = logicaLogin;
+            this.logicaAdministrador = logicaAdministrador;
         }
+
+        public ILogicaAdministrador Object { get; }
 
         [HttpPost]
         public ActionResult Loguearse(string email, string password)
@@ -35,7 +40,8 @@ namespace WebApplication1.Controllers
             }
 
             try
-            {       
+            {
+                logicaAdministrador.Obtener(email, password);
                 token = logicaLogin.RegistrarToken();
             }
             catch (Excepciones.ExcepcionAdministradorInexistente e)
