@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
     [Route("api/[controller]")]
     public class AdministradorController : ControllerBase
     {
-      private readonly ILogicaAdministrador logicaAdministrador;
+       private readonly ILogicaAdministrador logicaAdministrador;
 
         private readonly ILogicaLogin  logicaLogin;
 

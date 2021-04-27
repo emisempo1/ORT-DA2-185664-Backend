@@ -23,7 +23,9 @@ namespace Controllers.Tests
         public class LoginControllerTest
         {
             Administrador administrador;
-            Mock<ILogicaLogin> mock;
+
+            Mock<ILogicaAdministrador> mockAdministrador;
+            Mock<ILogicaLogin> mockLogin;
             List<Administrador> administradores;
 
             LoginController controllerLogin;
@@ -36,13 +38,14 @@ namespace Controllers.Tests
             public void initialize()
             {
 
-            mock = new Mock<ILogicaLogin>();
+            mockLogin = new Mock<ILogicaLogin>();
+            mockAdministrador = new Mock<ILogicaAdministrador>();
             Token tokenPrueba = new Token();
         
-            controllerLogin = new LoginController(mock.Object);
+            controllerLogin = new LoginController(mockLogin.Object,mockAdministrador.Object);
 
-            mock.Setup(m => m.RegistrarToken()).Returns("tokendeprueba");
-            mock.Setup(m => m.BuscarToken("tokendeprueba"));
+            mockLogin.Setup(m => m.RegistrarToken()).Returns("tokendeprueba");
+            mockLogin.Setup(m => m.BuscarToken("tokendeprueba"));
 
 
         }
@@ -58,7 +61,18 @@ namespace Controllers.Tests
         }
 
 
-       
+        [TestMethod]
+        public void TestLoguearseCredencialesInvalidas()
+        {
+            mockAdministrador.Setup(m => m.Obtener(It.IsAny<string>(), It.IsAny<string>())).Throws(new Excepciones.ExcepcionAdministradorInexistente("unadmin"));
+            ActionResult result = controllerLogin.Loguearse("hola@gmail.com", "12345678");
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode; // <-- Cast is before using it.
+            Assert.AreEqual(404, repuestaAAPIController);
+
+        }
+
+
+
 
 
 

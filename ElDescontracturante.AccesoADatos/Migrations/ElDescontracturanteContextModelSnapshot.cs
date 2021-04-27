@@ -16,7 +16,7 @@ namespace ElDescontracturante.AccesoADatos.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ElDescontracturante.Dominio.Administrador", b =>
@@ -110,6 +110,35 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.HasKey("NombrePlaylist", "NombreAudio");
 
                     b.ToTable("Playlists_Audio");
+                });
+
+            modelBuilder.Entity("ElDescontracturante.Dominio.Problematica_Psicologo", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("NombreProblematica")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Email", "NombreProblematica");
+
+                    b.ToTable("Problematica_Psicologo");
+                });
+
+            modelBuilder.Entity("ElDescontracturante.Dominio.Psicologo", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoDeConsulta")
+                        .HasColumnType("int");
+
+                    b.HasKey("Email");
+
+                    b.ToTable("Psicologo");
                 });
 
             modelBuilder.Entity("ElDescontracturante.Dominio.Token", b =>

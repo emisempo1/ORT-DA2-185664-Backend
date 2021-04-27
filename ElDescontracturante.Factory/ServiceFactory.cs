@@ -34,6 +34,9 @@ namespace Factory
             services.AddScoped<ITokenRepositorio, TokenRepositorio>();
             services.AddScoped<ILogicaLogin, LogicaLogin>();
 
+            services.AddScoped<IPsicologoRepositorio, PsicologoRepositorio>();
+            services.AddScoped<ILogicaPsicologo, LogicaPsicologo>();
+
 
         }
 
