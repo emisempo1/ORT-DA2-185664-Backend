@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using ElDescontracturante.Dominio;
 using ElDescontracturante.InterfazAccesoADatos;
@@ -17,74 +18,74 @@ namespace Controllers.Tests
 
 
     [TestClass]
-    public class AdministradorControllerTest
+    public class PsicologoControllerTest
     {
 
 
 
         [TestClass]
-        public class LogicaAdministradorTest
+        public class LogicaPsicologoTest
         {
-            Administrador administrador;
-            Mock<ILogicaAdministrador> mockAdministrador;
+            Psicologo psicologo;
+            Mock<ILogicaPsicologo> mockPsicologo;
             Mock<ILogicaLogin> mockLogin;
-            List<Administrador> administradores;
+            List<Psicologo> psicologos;
 
-            AdministradorController controllerAdministrador;
+            PsicologoController controllerPsicologo;
 
 
 
             [TestInitialize]
             public void initialize()
             {
-                administrador = new Administrador();
-                administrador.Nombre = "Carlos";
-                administrador.Password = "123455678";
-                administrador.Email = "dsd@gmail.com";
-                administradores = new List<Administrador>();
-                administradores.Add(administrador);
+                psicologo = new Psicologo();
+                psicologo.Nombre = "Carlos";
+                psicologo.TipoDeConsulta = (ElDescontracturante.Dominio.Psicologo.ModoDeConsulta)Enum.Parse(typeof(ElDescontracturante.Dominio.Psicologo.ModoDeConsulta), "VideoLlamada");
+                psicologo.Email = "carlitos@gmail.com";
+               
 
 
-                mockAdministrador = new Mock<ILogicaAdministrador>();
+                mockPsicologo = new Mock<ILogicaPsicologo>();
                 mockLogin = new Mock<ILogicaLogin>();
-                mockAdministrador.Setup(m => m.Agregar(administrador));
-                mockAdministrador.Setup(m => m.Obtener(administrador.Email, administrador.Password)).Returns(administrador);
-                controllerAdministrador = new AdministradorController(mockAdministrador.Object, mockLogin.Object);
+                mockPsicologo.Setup(m => m.Agregar(psicologo));
+                mockPsicologo.Setup(m => m.Obtener(psicologo.Email)).Returns(psicologo);
+                controllerPsicologo = new PsicologoController(mockPsicologo.Object, mockLogin.Object);
                 
 
             }
 
 
        [TestMethod]
-        public void TestAgregarAdministradorOk()
+        public void TestAgregarPsicologoOk()
         {
                 string token = "tokenvalido";
                 mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
-                AdministradorModel administradorModel = new AdministradorModel()
+                PsicologoModel psicologoModel = new PsicologoModel()
                {
-                Nombre = "Fabio",
-                Email= "fabiooyrockero@gmail.com",
-                Password =  "123456"};
+                Nombre = "Carlos",
+                Email= "carlitos@gmail.com",
+                TipoDeConsulta =  "VideoLlamada"
+               };
 
-            ActionResult result = controllerAdministrador.AgregarAdministrador(token,administradorModel);
+            ActionResult result = controllerPsicologo.AgregarPsicologo(token,psicologoModel);
             var repuestaAAPIController = ((CreatedResult)result).StatusCode; 
             Assert.AreEqual(201, repuestaAAPIController);
         }
 
 
             [TestMethod]
-            public void TestAgregarAdministradorTokenInvalido()
+            public void TestAgregarPsicologoTokenInvalido()
             {
                 string token = "tokenvalido";
                 mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionTokenInexistente(token));
-                AdministradorModel administradorModel = new AdministradorModel()
+                PsicologoModel psicologoModel = new PsicologoModel()
                 {
-                    Nombre = "Fabio",
-                    Email = "fabiooyrockero@gmail.com",
-                    Password = "123456"
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
                 };
 
-                ActionResult result = controllerAdministrador.AgregarAdministrador(token, administradorModel);
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
 
                 var repuestaAAPIController = ((ObjectResult)result).StatusCode;
 
