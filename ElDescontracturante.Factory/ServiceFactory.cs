@@ -37,6 +37,9 @@ namespace Factory
             services.AddScoped<IPsicologoRepositorio, PsicologoRepositorio>();
             services.AddScoped<ILogicaPsicologo, LogicaPsicologo>();
 
+            services.AddScoped<ICitaRepositorio, CitaRepositorio>();
+            services.AddScoped<ILogicaCita, LogicaCita>();
+   
 
         }
 

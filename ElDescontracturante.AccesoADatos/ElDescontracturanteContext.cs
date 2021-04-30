@@ -44,6 +44,9 @@ namespace ElDescontracturante.AccesoADatos
             modelBuilder.Entity<Psicologo>()
               .HasKey(c => c.Email);
 
+            modelBuilder.Entity<Cita>()
+           .HasKey(c => c.ID);
+
             modelBuilder.Entity<Playlist_Audio>()
                .HasKey(c => new { c.NombrePlaylist,c.NombreAudio});
 

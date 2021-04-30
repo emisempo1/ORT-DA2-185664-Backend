@@ -51,9 +51,34 @@ namespace ElDescontracturante.LogicaDominio
                     {
                         return listaPsicologoes[i];
                     }
-                }           
-                
-                throw new Excepciones.ExcepcionPsicologoInexistente(email);
+                }
+
+            throw new Excepciones.ExcepcionPsicologoInexistente(email);
+        }
+
+        public List<Psicologo> ObtenerPsicologosEspecializado(Problematica_Psicologo.Problematica problematica)
+        {
+            List<Problematica_Psicologo> listaPsicologoes = psicologoRepositorio.ObtenerProblematica();
+
+            List<Psicologo> listaPsicologosEspecializados = new List<Psicologo>();
+
+
+            for (int i = 0; i < listaPsicologoes.Count; i++)
+            {
+                if (listaPsicologoes[i].NombreProblematica == problematica)
+                {
+                    Psicologo psicologo = this.Obtener(listaPsicologoes[i].Email);
+                    listaPsicologosEspecializados.Add(psicologo);
+                }
+            }
+
+            if (listaPsicologosEspecializados.Count > 0)
+            {
+                return listaPsicologosEspecializados;
+            }
+           
+
+            throw new Excepciones.ExcepcionPsicologosInexistentes();
         }
 
 

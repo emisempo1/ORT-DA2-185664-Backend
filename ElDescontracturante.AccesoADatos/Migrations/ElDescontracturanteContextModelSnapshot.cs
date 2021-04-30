@@ -83,6 +83,36 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.ToTable("Categoria_Playlist");
                 });
 
+            modelBuilder.Entity("ElDescontracturante.Dominio.Cita", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmailPaciente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmailPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaConsulta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NombrePsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoDeConsulta")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Cita");
+                });
+
             modelBuilder.Entity("ElDescontracturante.Dominio.Playlist", b =>
                 {
                     b.Property<string>("Nombre")
@@ -117,8 +147,8 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("NombreProblematica")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("NombreProblematica")
+                        .HasColumnType("int");
 
                     b.HasKey("Email", "NombreProblematica");
 
@@ -129,6 +159,12 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                 {
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DireccionFisica")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");

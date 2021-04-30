@@ -13,5 +13,7 @@ namespace ElDescontracturante.InterfazLogicaDominio
 
         Psicologo Obtener(string email);
 
+        public List<Psicologo> ObtenerPsicologosEspecializado(Problematica_Psicologo.Problematica problematica);
+
     }
 }

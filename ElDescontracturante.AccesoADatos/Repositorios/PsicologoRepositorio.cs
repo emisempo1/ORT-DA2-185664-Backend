@@ -65,5 +65,17 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
                 throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
             }
         }
+
+        public List<Problematica_Psicologo> ObtenerProblematica()
+        {
+            try
+            {
+                return this.context.Set<Problematica_Psicologo>().ToList();
+            }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
+            }
+        }
     }
 }

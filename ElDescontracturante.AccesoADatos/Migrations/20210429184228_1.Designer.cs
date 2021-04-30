@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElDescontracturante.AccesoADatos.Migrations
 {
     [DbContext(typeof(ElDescontracturanteContext))]
-    [Migration("20210426120402_8")]
-    partial class _8
+    [Migration("20210429184228_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,6 +85,33 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.ToTable("Categoria_Playlist");
                 });
 
+            modelBuilder.Entity("ElDescontracturante.Dominio.Cita", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmailPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaConsulta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NombrePsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoDeConsulta")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Cita");
+                });
+
             modelBuilder.Entity("ElDescontracturante.Dominio.Playlist", b =>
                 {
                     b.Property<string>("Nombre")
@@ -112,6 +139,41 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.HasKey("NombrePlaylist", "NombreAudio");
 
                     b.ToTable("Playlists_Audio");
+                });
+
+            modelBuilder.Entity("ElDescontracturante.Dominio.Problematica_Psicologo", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("NombreProblematica")
+                        .HasColumnType("int");
+
+                    b.HasKey("Email", "NombreProblematica");
+
+                    b.ToTable("Problematica_Psicologo");
+                });
+
+            modelBuilder.Entity("ElDescontracturante.Dominio.Psicologo", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DireccionFisica")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoDeConsulta")
+                        .HasColumnType("int");
+
+                    b.HasKey("Email");
+
+                    b.ToTable("Psicologo");
                 });
 
             modelBuilder.Entity("ElDescontracturante.Dominio.Token", b =>

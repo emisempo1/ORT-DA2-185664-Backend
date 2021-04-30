@@ -10,6 +10,8 @@ namespace ElDescontracturante.Dominio
         public string Nombre { get; set; }
         public ModoDeConsulta TipoDeConsulta { get; set; }
         public enum ModoDeConsulta { VideoLlamada, Presencial }
-
+        public DateTime FechaIngreso { get; set; }
+        public string DireccionFisica { get; set; }
+     
     }
 }

@@ -6,12 +6,18 @@ namespace ElDescontracturante.AccesoADatos.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.AddColumn<string>(
+                name: "EmailPaciente",
+                table: "Cita",
+                type: "nvarchar(max)",
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.DropColumn(
+                name: "EmailPaciente",
+                table: "Cita");
         }
     }
 }

@@ -13,7 +13,10 @@ namespace ElDescontracturante.InterfazAccesoADatos
 
         void AgregarProblematica(Problematica_Psicologo unaProblematica);
 
- 
+        List<Problematica_Psicologo> ObtenerProblematica();
+
+
+
 
 
     }

@@ -9,6 +9,8 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersT
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.runtimeconfig.json
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.runtimeconfig.dev.json
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -38,6 +40,7 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersT
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Moq.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
@@ -145,11 +148,8 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersT
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.csprojAssemblyReference.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.AssemblyInfoInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.AssemblyInfo.cs
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.csproj.CopyComplete
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.genruntimeconfig.cache
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.pdb
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\bin\Debug\netcoreapp3.1\Moq.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.ControllersTest\obj\Debug\netcoreapp3.1\ElDescontracturante.ControllersTest.genruntimeconfig.cache
