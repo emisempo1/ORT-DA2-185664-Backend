@@ -63,7 +63,36 @@ namespace WebApplication1.Controllers
         }
 
 
-    
+        [HttpDelete]
+        public ActionResult BorrarPsicologo([FromHeader] string token, string email)
+        {
+            Psicologo psicologo = new Psicologo();
+            try
+            {
+                this.logicaLogin.BuscarToken(token);
+                psicologo = this.logicaPsicologo.Obtener(email);
+                this.logicaPsicologo.Borrar(psicologo);
+            }
+            catch (Excepciones.ExcepcionPsicologoInexistente e)
+            {
+                return NotFound(e.Message);
+            }
+            catch (Excepciones.ExcepcionTokenInexistente e)
+            {
+                return StatusCode(401, e.Message);
+            }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500, e.Message);
+            }
+
+            return Ok("Se borro el psicologo" + psicologo.Nombre);
+
+        }
+
+
+
+
 
 
 

@@ -11,6 +11,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
 
         public void AgregarEspecialidadEnProblematica(string emailPsicologo, Problematica_Psicologo.Problematica[] problematicas);
 
+        public void Borrar(Psicologo psicologo);
+
         Psicologo Obtener(string email);
 
         public List<Psicologo> ObtenerPsicologosEspecializado(Problematica_Psicologo.Problematica problematica);

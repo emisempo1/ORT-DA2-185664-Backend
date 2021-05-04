@@ -23,7 +23,9 @@ namespace ElDescontracturante.LogicaDominio
             psicologoRepositorio.Agregar(Psicologo);
         }
 
-        public void AgregarEspecialidadEnProblematica(string emailPsicologo, Problematica_Psicologo.Problematica[] problematicas)
+
+
+    public void AgregarEspecialidadEnProblematica(string emailPsicologo, Problematica_Psicologo.Problematica[] problematicas)
         {
 
             Obtener(emailPsicologo);
@@ -40,6 +42,8 @@ namespace ElDescontracturante.LogicaDominio
 
             
         }
+
+      
 
         public Psicologo Obtener(string email)
         {
@@ -82,6 +86,12 @@ namespace ElDescontracturante.LogicaDominio
         }
 
 
+        public void Borrar(Psicologo psicologo)
+        {
+            psicologoRepositorio.Eliminar(psicologo);
+        }
+
+     
 
 
 

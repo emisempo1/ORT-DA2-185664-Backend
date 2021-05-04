@@ -36,7 +36,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException)
             {
-                throw new Excepciones.ExcepcionAudioDuplicado();
+                throw new Excepciones.ExcepcionPlaylistDuplicado();
             }
             catch (System.InvalidOperationException)
             {
@@ -47,7 +47,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
         public List<Playlist> ObtenerPlaylist()
         {
-            return this.context.Set<Playlist>().ToList();
+             return this.context.Set<Playlist>().ToList();
         }
 
         public List<Playlist> ObtenerPlaylist(string[] nombres)

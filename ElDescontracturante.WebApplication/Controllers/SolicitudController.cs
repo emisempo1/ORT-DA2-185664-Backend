@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult AgregarCita([FromHeader] string token, [FromBody] SolicitudModel solicitudmodel)
         {
-            Cita cita = new Cita();
+               Cita cita = new Cita();
 
                 Solicitud solicitud = new Solicitud();
             try

@@ -21,6 +21,22 @@ namespace ElDescontracturante.LogicaDominio
             audioRepositorio.Agregar(unAudio);
         }
 
+        public void Borrar(string nombre)
+        {
+            List<Audio> audios = ObtenerAudios();
+
+            for (int i = 0; i < audios.Count; i++)
+            {
+                if (audios[i].Nombre == nombre)
+                {
+                    audioRepositorio.Eliminar(audios[i]);
+                    return;
+                }
+            }
+
+            throw new Excepciones.ExcepcionAudioInexistente(nombre);
+        }
+
 
         public List<Audio> ObtenerAudios()
         {

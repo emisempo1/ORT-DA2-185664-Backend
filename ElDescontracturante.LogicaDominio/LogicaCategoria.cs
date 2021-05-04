@@ -10,10 +10,12 @@ namespace ElDescontracturante.LogicaDominio
     public class LogicaCategoria : ILogicaCategoria
     {
         private readonly ICategoriaRepositorio categoriaRepositorio;
+        private readonly IAudioRepositorio audioRepositorio;
 
-        public LogicaCategoria(ICategoriaRepositorio logicaCategoria)
+        public LogicaCategoria(ICategoriaRepositorio categoriaRepositorio, IAudioRepositorio audioRepositorio)
         {
-            this.categoriaRepositorio = logicaCategoria;
+            this.categoriaRepositorio = categoriaRepositorio;
+            this.audioRepositorio = audioRepositorio;
         }
 
         public void AgregarPlaylistsACategoria(Categoria unaCategoria)
@@ -23,7 +25,22 @@ namespace ElDescontracturante.LogicaDominio
 
         public Categoria ObtenerCategoria(string nombre)
         {
-            return categoriaRepositorio.ObtenerCategoria(nombre);
+        
+            Categoria categoria = categoriaRepositorio.ObtenerCategoria(nombre);
+
+            List<Playlist> playlistConAudios = categoria.ListaPlaylist;
+         
+
+            for (int i = 0; i < playlistConAudios.Count; i++)
+            {
+                playlistConAudios[i].ListaAudios = audioRepositorio.ObtenerAudios(playlistConAudios[i]);
+
+            }
+
+            categoria.ListaPlaylist = playlistConAudios;
+
+            return categoria;
+
         }
 
     

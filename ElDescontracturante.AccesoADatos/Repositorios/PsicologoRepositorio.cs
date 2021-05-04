@@ -35,7 +35,39 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
         }
 
 
-      
+        public void Eliminar(Psicologo unPsicologo)
+        {
+            try
+            {
+                this.context.Remove(unPsicologo);
+                this.context.SaveChanges();
+                EliminarProblematicasPsicologo(unPsicologo.Email);
+            }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
+            }
+        }
+
+
+
+        public void EliminarProblematicasPsicologo(string email)
+        {
+
+            List<Problematica_Psicologo> listaMapeoProblematicaPsicologo = this.context.Set<Problematica_Psicologo>().ToList();
+            for (int i = 0; i < listaMapeoProblematicaPsicologo.Count; i++)
+            {
+                if (listaMapeoProblematicaPsicologo[i].Email == email)
+                {
+                    this.context.Remove(listaMapeoProblematicaPsicologo[i]);
+                    this.context.SaveChanges();
+                }
+            }
+        }
+
+
+
+
 
         public void AgregarProblematica(Problematica_Psicologo unaProbelamaticaPsicologo)
         {

@@ -35,6 +35,40 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             }
         }
 
+        public void Eliminar(Audio unAudio)
+        {
+            try
+            {
+                this.context.Remove(unAudio);   
+                this.context.SaveChanges();
+                EliminarAudioDePlaylist(unAudio);
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+            {
+                throw new Excepciones.ExcepcionAudioDuplicado();
+            }
+            catch (System.InvalidOperationException)
+            {
+                throw new Excepciones.ExcepcionAudioDuplicado();
+            }
+        }
+
+        public void EliminarAudioDePlaylist(Audio unAudio)
+        {
+           
+                List<Playlist_Audio> listaMapeoAudioconPlaylist = this.context.Set<Playlist_Audio>().ToList();
+                for (int i = 0; i < listaMapeoAudioconPlaylist.Count; i++)
+                {
+                    if (listaMapeoAudioconPlaylist[i].NombreAudio == unAudio.Nombre)
+                    {
+                        this.context.Remove(listaMapeoAudioconPlaylist[i]);
+                        this.context.SaveChanges();
+                    }
+                }
+        }
+
+
+
         public List<Audio> ObtenerAudios()
         {
             return this.context.Set<Audio>().ToList();
@@ -70,7 +104,20 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
      
         }
 
-
-
+        public List<Audio> ObtenerAudios(Playlist unaPlaylist)
+        {
+            List<Audio> audioaRetornar = new List<Audio>();
+            List<string> nombresAudioARetornar = new List<string>();
+            List<Playlist_Audio> listaMapeoAudioconPlaylist = this.context.Set<Playlist_Audio>().ToList();
+            for (int i = 0; i < listaMapeoAudioconPlaylist.Count; i++)
+            {
+                if (listaMapeoAudioconPlaylist[i].NombrePlaylist == unaPlaylist.Nombre)
+                {
+                    nombresAudioARetornar.Add(listaMapeoAudioconPlaylist[i].NombreAudio);
+                }
+            }
+            audioaRetornar = ObtenerAudios(nombresAudioARetornar.ToArray());
+            return audioaRetornar;
+        }
     }
 }

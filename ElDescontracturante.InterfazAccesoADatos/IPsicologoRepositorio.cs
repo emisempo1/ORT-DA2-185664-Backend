@@ -9,6 +9,8 @@ namespace ElDescontracturante.InterfazAccesoADatos
     {
         void Agregar(Psicologo unPsicologo);
 
+       void Eliminar(Psicologo unPsicologo);
+
         List<Psicologo> Obtener();
 
         void AgregarProblematica(Problematica_Psicologo unaProblematica);

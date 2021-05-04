@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
 using ElDescontracturante.LogicaDominio;
 using Excepciones;
+using Newtonsoft.Json;
 
 namespace WebApplication1.Controllers
 {
@@ -73,14 +74,14 @@ namespace WebApplication1.Controllers
            
             try
             {
-               playlists =  this.logicaPlaylist.Obtenerplaylists(); ;
+                playlists =  this.logicaPlaylist.Obtenerplaylists(); 
             }
             catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
                 return StatusCode(500, e.Message);
             }
 
-            return Ok(playlists);
+            return Ok(JsonConvert.SerializeObject(playlists));
 
         }
 

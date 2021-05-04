@@ -47,16 +47,10 @@ namespace WebApplication1.Controllers
             {
                 return StatusCode(500, e.Message);
             }
-
-            return Created("api/[controller]", Audio);
-
-           
-               
+            return Created("api/[controller]", Audio);         
         }
 
-     
-
-
+    
         [HttpGet]
         public ActionResult ObtenerAudios()
         {
@@ -73,6 +67,27 @@ namespace WebApplication1.Controllers
 
             return Ok(audios);
 
+        }
+
+        [HttpDelete]
+        public ActionResult BorrarAudio(string nombre)
+        {
+           
+            Audio Audio = new Audio();
+            try
+            {
+
+                this.logicaAudio.Borrar(nombre);
+            }
+            catch (Excepciones.ExcepcionAudioInexistente e)
+            {
+                return NotFound(e.Message);
+            }
+            catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            return Ok("el aduio fue eliminado correctamente :" + nombre);
         }
 
 

@@ -12,6 +12,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
 
         List<Audio> ObtenerAudios(string[] nombre);
 
+        void Borrar(string nombre);
+
     }
 
 }

@@ -8,11 +8,17 @@ namespace ElDescontracturante.LogicaDominio
 {
     public class LogicaPlayList:ILogicaPlaylist
     {
-        private readonly IPlaylistRepositorio playlistRepositorio;
 
-        public LogicaPlayList(IPlaylistRepositorio playlistRepositorio)
+        
+        Playlist unaPlaylist;
+        private readonly IPlaylistRepositorio playlistRepositorio;
+        private readonly IAudioRepositorio audioRepositorio;
+        LogicaAudio logicaAudio;
+
+        public LogicaPlayList(IPlaylistRepositorio playlistRepositorio, IAudioRepositorio audioRepositorio)
         {
             this.playlistRepositorio = playlistRepositorio;
+            this.audioRepositorio = audioRepositorio;
         }
 
         public void Agregar(Playlist unplaylist)
@@ -22,14 +28,31 @@ namespace ElDescontracturante.LogicaDominio
 
         public List<Playlist> ObtenerPlaylist(string[] nombre)
         {
-            return playlistRepositorio.ObtenerPlaylist(nombre);
+            List<Playlist> playlistsaretornar = new List<Playlist>();
+            playlistsaretornar = playlistRepositorio.ObtenerPlaylist(nombre);
+
+            for (int i = 0; i < playlistsaretornar.Count; i++)
+            {
+                playlistsaretornar[i].ListaAudios = audioRepositorio.ObtenerAudios(playlistsaretornar[i]);
+            }
+
+            return playlistsaretornar;
         }
 
         public List<Playlist> Obtenerplaylists()
         {
-            return playlistRepositorio.ObtenerPlaylist();
+            List<Playlist> playlistsaretornar = new List<Playlist>();
+            playlistsaretornar = playlistRepositorio.ObtenerPlaylist();
+
+            for (int i = 0; i < playlistsaretornar.Count; i++)
+            {
+                playlistsaretornar[i].ListaAudios = audioRepositorio.ObtenerAudios(playlistsaretornar[i]);
+            }
+
+            return playlistsaretornar;
         }
 
+      
     }
 }
 
