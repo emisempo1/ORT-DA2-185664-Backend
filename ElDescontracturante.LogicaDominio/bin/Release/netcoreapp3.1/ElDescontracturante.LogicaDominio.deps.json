@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ElDescontracturante.LogicaDominio/1.0.0": {
+        "dependencies": {
+          "ElDescontracturante.Excepciones": "1.0.0",
+          "ElDescontracturante.InterfazAccesoADatos": "1.0.0",
+          "ElDescontracturante.InterfazLogicaDominio": "1.0.0"
+        },
+        "runtime": {
+          "ElDescontracturante.LogicaDominio.dll": {}
+        }
+      },
+      "ElDescontracturante.Dominio/1.0.0": {
+        "runtime": {
+          "ElDescontracturante.Dominio.dll": {}
+        }
+      },
+      "ElDescontracturante.Excepciones/1.0.0": {
+        "runtime": {
+          "ElDescontracturante.Excepciones.dll": {}
+        }
+      },
+      "ElDescontracturante.InterfazAccesoADatos/1.0.0": {
+        "dependencies": {
+          "ElDescontracturante.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "ElDescontracturante.InterfazAccesoADatos.dll": {}
+        }
+      },
+      "ElDescontracturante.InterfazLogicaDominio/1.0.0": {
+        "dependencies": {
+          "ElDescontracturante.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "ElDescontracturante.InterfazLogicaDominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ElDescontracturante.LogicaDominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElDescontracturante.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElDescontracturante.Excepciones/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElDescontracturante.InterfazAccesoADatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElDescontracturante.InterfazLogicaDominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

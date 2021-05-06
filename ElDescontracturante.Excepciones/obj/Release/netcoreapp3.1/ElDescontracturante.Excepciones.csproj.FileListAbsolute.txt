@@ -1,0 +1,8 @@
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\bin\Release\netcoreapp3.1\ElDescontracturante.Excepciones.deps.json
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\bin\Release\netcoreapp3.1\ElDescontracturante.Excepciones.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\bin\Release\netcoreapp3.1\ElDescontracturante.Excepciones.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Release\netcoreapp3.1\ElDescontracturante.Excepciones.AssemblyInfoInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Release\netcoreapp3.1\ElDescontracturante.Excepciones.AssemblyInfo.cs
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Release\netcoreapp3.1\ElDescontracturante.Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Release\netcoreapp3.1\ElDescontracturante.Excepciones.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Release\netcoreapp3.1\ElDescontracturante.Excepciones.pdb

@@ -1,0 +1,8 @@
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\bin\Release\netcoreapp3.1\ElDescontracturante.Dominio.deps.json
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\bin\Release\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\bin\Release\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Release\netcoreapp3.1\ElDescontracturante.Dominio.AssemblyInfoInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Release\netcoreapp3.1\ElDescontracturante.Dominio.AssemblyInfo.cs
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Release\netcoreapp3.1\ElDescontracturante.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Release\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Release\netcoreapp3.1\ElDescontracturante.Dominio.pdb

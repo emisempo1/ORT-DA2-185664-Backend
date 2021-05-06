@@ -1,0 +1,12 @@
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\bin\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.deps.json
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\bin\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\bin\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\bin\Release\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\bin\Release\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csprojAssemblyReference.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.AssemblyInfoInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.AssemblyInfo.cs
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.CopyComplete
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Release\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb

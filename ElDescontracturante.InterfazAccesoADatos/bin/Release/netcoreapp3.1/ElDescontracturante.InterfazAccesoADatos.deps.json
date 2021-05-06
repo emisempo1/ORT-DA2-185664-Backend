@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ElDescontracturante.InterfazAccesoADatos/1.0.0": {
+        "dependencies": {
+          "ElDescontracturante.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "ElDescontracturante.InterfazAccesoADatos.dll": {}
+        }
+      },
+      "ElDescontracturante.Dominio/1.0.0": {
+        "runtime": {
+          "ElDescontracturante.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ElDescontracturante.InterfazAccesoADatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElDescontracturante.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
