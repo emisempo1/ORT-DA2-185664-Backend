@@ -41,39 +41,172 @@ namespace Controllers.Tests
         [TestMethod]
         public void TestAagregarPlaylistAACategoriaOk()
         {
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((CreatedResult)result).StatusCode;
+            Assert.AreEqual(201, repuestaAAPIController);
+        }
 
+        [TestMethod]
+        public void TestAagregarPlaylistInexistenteAACategoria()
+        {
+            mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionPlaylistInexistente("playlistInexistente"));
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
                 NombreCategoria = "Dormir",
                 ListaPlaylist = new string[] { "Cachengue" }
-             
-
             };
-
-
             ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+            Assert.AreEqual(404, repuestaAAPIController);
+        }
 
-            var repuestaAAPIController = ((CreatedResult)result).StatusCode;
 
-            Assert.AreEqual(201, repuestaAAPIController);
 
+        public void TestAagregarPlaylistInexistenteNull()
+        {
+            
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(null);
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode;
+            Assert.AreEqual(400, repuestaAAPIController);
+        }
+
+        public void TestAagregarCategoriaInexistente()
+        {
+            mockCategoria.Setup(m => m.AgregarPlaylistsACategoria(It.IsAny<Categoria>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((ConflictObjectResult)result).StatusCode;
+            Assert.AreEqual(409, repuestaAAPIController);
+        }
+
+
+        
+
+        [TestMethod]
+        public void TestAagregarPlaylistALaMismaCategoriaDosveces()
+        {
+            mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionPlaylistYaAsociadaACategoria("categoria","playlistInexistente"));
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((ConflictObjectResult)result).StatusCode;
+            Assert.AreEqual(409, repuestaAAPIController);
         }
 
 
         [TestMethod]
-        public void TestObtenerCategoria()
+        public void TestAagregarPlaylistBdCaida()
         {
-           
-            ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
+            mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
 
-            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
-
-            Assert.AreEqual(200, repuestaAAPIController);
-
-
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+            Assert.AreEqual(500, repuestaAAPIController);
         }
 
+        [TestMethod]
+        public void TestAagregarPlaylistACategoriaNull()
+        {
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(null);
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode;
+            Assert.AreEqual(400, repuestaAAPIController);
+        }
+
+        [TestMethod]
+        public void TestAagregarPlaylistListaPlaylistNull()
+        {
+       
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = null
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode;
+            Assert.AreEqual(400, repuestaAAPIController);
+        }
+
+
+        [TestMethod]
+        public void TestAagregarPlaylistACategoriaincorrecta()
+        {
+            mockCategoria.Setup(m => m.AgregarPlaylistsACategoria(It.IsAny<Categoria>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+
+            CategoriaModel categoriaModel = new CategoriaModel()
+            {
+                NombreCategoria = "Dormir",
+                ListaPlaylist = new string[] { "Cachengue" }
+            };
+            ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(categoriaModel);
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+            Assert.AreEqual(404, repuestaAAPIController);
+        }
+
+      
+
+        [TestMethod]
+        public void TestObtenerCategoria()
+        {     
+            ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
+            var repuestaAAPIController = ((OkObjectResult)result).StatusCode;
+            Assert.AreEqual(200, repuestaAAPIController);
+        }
+
+
+        [TestMethod]
+        public void TestObtenerCategoriaNombreIncorrecto()
+        {
+            mockCategoria.Setup(m => m.ObtenerCategoria(It.IsAny<string>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode; 
+            Assert.AreEqual(404, repuestaAAPIController);
+        }
+
+        [TestMethod]
+        public void TestObtenerCategoriaMotorBaseDeDatosCaido()
+        {
+            mockCategoria.Setup(m => m.ObtenerCategoria(It.IsAny<string>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
+            var repuestaAAPIController = ((ObjectResult)result).StatusCode; 
+            Assert.AreEqual(500, repuestaAAPIController);
+        }
 
 
 

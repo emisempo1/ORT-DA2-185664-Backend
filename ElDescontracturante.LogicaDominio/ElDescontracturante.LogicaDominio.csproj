@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ElDescontracturante.AccesoADatos\ElDescontracturante.AccesoADatos.csproj" />
+    <ProjectReference Include="..\ElDescontracturante.Excepciones\ElDescontracturante.Excepciones.csproj" />
     <ProjectReference Include="..\ElDescontracturante.InterfazAccesoADatos\ElDescontracturante.InterfazAccesoADatos.csproj" />
     <ProjectReference Include="..\ElDescontracturante.InterfazLogicaDominio\ElDescontracturante.InterfazLogicaDominio.csproj" />
   </ItemGroup>

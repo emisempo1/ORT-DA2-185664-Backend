@@ -15,6 +15,7 @@ namespace ElDescontracturante.LogicaDominioTest
         Playlist playlist;
         LogicaPlayList logicaPlaylist;
         Mock<IPlaylistRepositorio> mock;
+        Mock<IAudioRepositorio> mockAudio;
         List<Playlist> playlists;
 
 
@@ -31,7 +32,10 @@ namespace ElDescontracturante.LogicaDominioTest
 
             mock = new Mock<IPlaylistRepositorio>();
             mock.Setup(m => m.ObtenerPlaylist()).Returns(playlists);
-            logicaPlaylist = new LogicaPlayList(mock.Object);
+            mockAudio = new Mock<IAudioRepositorio>();
+            logicaPlaylist = new LogicaPlayList(mock.Object,mockAudio.Object);
+
+          
 
         }
 
@@ -54,6 +58,9 @@ namespace ElDescontracturante.LogicaDominioTest
             Assert.AreEqual(playlists, result);
         }
 
+
+
+     
 
     }
 

@@ -66,15 +66,79 @@ namespace Controllers.Tests
                 Problematica = "Depresion"
             };
 
-            ActionResult result = controllerSolicitud.AgregarCita("tokenvalido",solicitudModel);
-            var repuestaAAPIController = ((CreatedResult)result).StatusCode; // <-- Cast is before using it.
+            ActionResult result = controllerSolicitud.AgregarCita(solicitudModel);
+            var repuestaAAPIController = ((CreatedResult)result).StatusCode; 
             Assert.AreEqual(201, repuestaAAPIController);
         }
 
 
 
 
-      
+        [TestMethod]
+        public void TestGenerarCitaProblamaticaIncorrecta()
+        {
+            mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
+            mockCita.Setup(m => m.GenerarCita(It.IsAny<List<Psicologo>>(), It.IsAny<DateTime>())).Throws(new Excepciones.ExcepcionNombreProblematicaIncorrecta("magia negra"));
+
+            SolicitudModel solicitudModel = new SolicitudModel()
+            {
+                Celular = "094556723",
+                Email = "maxi@gmail.com",
+                Nombre = "Maxi",
+                FechaNacimiento = "1982-05-05 ",
+                Problematica = "Depresion"
+            };
+
+            ActionResult result = controllerSolicitud.AgregarCita(solicitudModel);
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+            Assert.AreEqual(404, repuestaAAPIController);
+        }
+
+
+        [TestMethod]
+        public void TestGenerarCitaPsicologoInexistente()
+        {
+            mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
+            mockCita.Setup(m => m.GenerarCita(It.IsAny<List<Psicologo>>(), It.IsAny<DateTime>())).Throws(new Excepciones.ExcepcionPsicologosInexistentes());
+
+            SolicitudModel solicitudModel = new SolicitudModel()
+            {
+                Celular = "094556723",
+                Email = "maxi@gmail.com",
+                Nombre = "Maxi",
+                FechaNacimiento = "1982-05-05 ",
+                Problematica = "Depresion"
+            };
+
+            ActionResult result = controllerSolicitud.AgregarCita(solicitudModel);
+            var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+            Assert.AreEqual(404, repuestaAAPIController);
+        }
+
+        [TestMethod]
+        public void TestGenerarCitaPsicologoCaeBd()
+        {
+            mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
+            mockCita.Setup(m => m.GenerarCita(It.IsAny<List<Psicologo>>(), It.IsAny<DateTime>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+
+            SolicitudModel solicitudModel = new SolicitudModel()
+            {
+                Celular = "094556723",
+                Email = "maxi@gmail.com",
+                Nombre = "Maxi",
+                FechaNacimiento = "1982-05-05 ",
+                Problematica = "Depresion"
+            };
+
+            ActionResult result = controllerSolicitud.AgregarCita(solicitudModel);
+            var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+            Assert.AreEqual(500, repuestaAAPIController);
+        }
+
+
+
+
+
 
 
 

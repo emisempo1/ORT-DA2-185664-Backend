@@ -29,21 +29,19 @@ namespace WebApplication1.Controllers
 
 
         [HttpPost]
-        public ActionResult AgregarCita([FromHeader] string token, [FromBody] SolicitudModel solicitudmodel)
+        public ActionResult AgregarCita([FromBody] SolicitudModel solicitudmodel)
         {
                Cita cita = new Cita();
 
                 Solicitud solicitud = new Solicitud();
             try
             {
-
                solicitud = solicitudmodel.ToEntity();
                List<Psicologo> psicEspecializados = this.logicaPsicologo.ObtenerPsicologosEspecializado(solicitud.NombreProblematica);
                DateTime fecha = DateTime.Today;
                cita = logicaCita.GenerarCita(psicEspecializados,fecha);
                cita.EmailPaciente = solicitud.Email;
                logicaCita.Agregar(cita);
-
             }
          
             catch (Excepciones.ExcepcionNombreProblematicaIncorrecta e)

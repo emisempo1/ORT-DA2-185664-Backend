@@ -55,8 +55,33 @@ namespace Controllers.Tests
             }
 
 
-       [TestMethod]
-        public void TestAgregarPsicologoOk()
+            [TestMethod]
+            public void TestAgregarPsicologoOk()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada",
+                    ProblematicasEspecializadas = new string[] { "Depresion", "Estres", "Ansiedad" },
+                    FechaIngreso = "1995-05-05",
+                    DireccionFisica = "yaguaron 1415"
+            };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+                var repuestaAAPIController = ((CreatedResult)result).StatusCode;
+                Assert.AreEqual(201, repuestaAAPIController);
+
+
+                
+
+            }
+
+
+            [TestMethod]
+        public void TestAgregarPsicologoConListaEspecialidadesenNull()
         {
                 string token = "tokenvalido";
                 mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
@@ -65,12 +90,17 @@ namespace Controllers.Tests
                 Nombre = "Carlos",
                 Email= "carlitos@gmail.com",
                 TipoDeConsulta =  "VideoLlamada"
+                
                };
 
             ActionResult result = controllerPsicologo.AgregarPsicologo(token,psicologoModel);
-            var repuestaAAPIController = ((CreatedResult)result).StatusCode; 
-            Assert.AreEqual(201, repuestaAAPIController);
+            var repuestaAAPIController = ((ConflictObjectResult)result).StatusCode; 
+            Assert.AreEqual(409, repuestaAAPIController);
         }
+
+
+      
+
 
 
             [TestMethod]
@@ -95,8 +125,202 @@ namespace Controllers.Tests
 
 
 
+            [TestMethod]
+            public void TestAgregarPsicologoProblematicaIncorrecta()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionNombreProblematicaIncorrecta("visiones"));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+
+                var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+
+                Assert.AreEqual(404, repuestaAAPIController);
+            }
 
 
+            [TestMethod]
+            public void TestAgregarPsicologoPsicologoInexistente()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionNombreProblematicaIncorrecta("visiones"));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+
+                var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+
+                Assert.AreEqual(404, repuestaAAPIController);
+            }
+
+          
+
+            [TestMethod]
+            public void TestAgregarPsicologoPsicologoDuplicado()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionPsicologoDuplicado());
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+
+                var repuestaAAPIController = ((ConflictObjectResult)result).StatusCode;
+
+                Assert.AreEqual(409, repuestaAAPIController);
+            }
+
+
+            [TestMethod]
+            public void TestAgregarPsicologoModoConsultaIncorrecto()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionNombreModoDeConsultaIncorrecta("al aire libre"));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+
+                var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+
+                Assert.AreEqual(404, repuestaAAPIController);
+            }
+
+
+
+
+
+            [TestMethod]
+            public void TestAgregarPsicologoPsicologoBdCaida()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.AgregarPsicologo(token, psicologoModel);
+
+                var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+
+                Assert.AreEqual(500, repuestaAAPIController);
+            }
+
+
+
+
+
+
+
+
+
+
+
+            [TestMethod]
+            public void TestBorrarPsicologoOk()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>()));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada",
+                    ProblematicasEspecializadas = new string[] { "Depresion", "Estres", "Ansiedad" },
+                    FechaIngreso = "1995-05-05",
+                    DireccionFisica = "yaguaron 1415"
+                };
+
+                ActionResult result = controllerPsicologo.BorrarPsicologo(token, psicologoModel.Email);
+                var repuestaAAPIController = ((OkObjectResult)result).StatusCode;
+                Assert.AreEqual(200, repuestaAAPIController);
+
+            }
+
+
+        
+
+
+            [TestMethod]
+            public void TestBorrarPsicologoTokenInvalido()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionTokenInexistente(token));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.BorrarPsicologo(token, psicologoModel.Email);
+
+                var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+
+                Assert.AreEqual(401, repuestaAAPIController);
+            }
+
+
+            [TestMethod]
+            public void TestBorrarPsicologoInexistente()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionPsicologoInexistente(token));
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.BorrarPsicologo(token, psicologoModel.Email);
+
+                var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode;
+
+                Assert.AreEqual(404, repuestaAAPIController);
+            }
+
+
+            [TestMethod]
+            public void TestBorrarPsicologoBdCaida()
+            {
+                string token = "tokenvalido";
+                mockLogin.Setup(m => m.BuscarToken(It.IsAny<string>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+                PsicologoModel psicologoModel = new PsicologoModel()
+                {
+                    Nombre = "Carlos",
+                    Email = "carlitos@gmail.com",
+                    TipoDeConsulta = "VideoLlamada"
+                };
+
+                ActionResult result = controllerPsicologo.BorrarPsicologo(token, psicologoModel.Email);
+
+                var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+
+                Assert.AreEqual(500, repuestaAAPIController);
+            }
 
 
 

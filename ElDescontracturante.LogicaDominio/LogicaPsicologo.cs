@@ -1,4 +1,4 @@
-﻿using ElDescontracturante.AccesoADatos.Repositorios;
+﻿
 using ElDescontracturante.Dominio;
 using ElDescontracturante.InterfazAccesoADatos;
 using ElDescontracturante.InterfazLogicaDominio;
@@ -23,15 +23,9 @@ namespace ElDescontracturante.LogicaDominio
             psicologoRepositorio.Agregar(Psicologo);
         }
 
-
-
-    public void AgregarEspecialidadEnProblematica(string emailPsicologo, Problematica_Psicologo.Problematica[] problematicas)
+        public void AgregarEspecialidadEnProblematica(string emailPsicologo, Problematica_Psicologo.Problematica[] problematicas)
         {
-
             Obtener(emailPsicologo);
-
-            
-
             for (int i = 0; i < problematicas.Length; i++)
             {
                 Problematica_Psicologo unaProbelamaticaPsicologo = new Problematica_Psicologo();
@@ -39,23 +33,19 @@ namespace ElDescontracturante.LogicaDominio
                 unaProbelamaticaPsicologo.NombreProblematica = problematicas[i];
                 psicologoRepositorio.AgregarProblematica(unaProbelamaticaPsicologo);
             }
-
-            
         }
-
-      
 
         public Psicologo Obtener(string email)
         {
             List<Psicologo> listaPsicologoes = psicologoRepositorio.Obtener();
 
-                for (int i = 0; i < listaPsicologoes.Count; i++)
+            for (int i = 0; i < listaPsicologoes.Count; i++)
+            {
+                if (listaPsicologoes[i].Email == email)
                 {
-                    if (listaPsicologoes[i].Email == email) 
-                    {
-                        return listaPsicologoes[i];
-                    }
+                    return listaPsicologoes[i];
                 }
+            }
 
             throw new Excepciones.ExcepcionPsicologoInexistente(email);
         }
@@ -63,10 +53,7 @@ namespace ElDescontracturante.LogicaDominio
         public List<Psicologo> ObtenerPsicologosEspecializado(Problematica_Psicologo.Problematica problematica)
         {
             List<Problematica_Psicologo> listaPsicologoes = psicologoRepositorio.ObtenerProblematica();
-
             List<Psicologo> listaPsicologosEspecializados = new List<Psicologo>();
-
-
             for (int i = 0; i < listaPsicologoes.Count; i++)
             {
                 if (listaPsicologoes[i].NombreProblematica == problematica)
@@ -75,13 +62,10 @@ namespace ElDescontracturante.LogicaDominio
                     listaPsicologosEspecializados.Add(psicologo);
                 }
             }
-
             if (listaPsicologosEspecializados.Count > 0)
             {
                 return listaPsicologosEspecializados;
             }
-           
-
             throw new Excepciones.ExcepcionPsicologosInexistentes();
         }
 
@@ -90,10 +74,6 @@ namespace ElDescontracturante.LogicaDominio
         {
             psicologoRepositorio.Eliminar(psicologo);
         }
-
-     
-
-
 
     };
 }

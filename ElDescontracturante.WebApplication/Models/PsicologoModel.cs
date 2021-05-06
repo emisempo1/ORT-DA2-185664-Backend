@@ -43,12 +43,16 @@ namespace WebApplication1.Models
 
         public Problematica_Psicologo.Problematica[] GetListaProblematicas()
         {
+            if (ProblematicasEspecializadas == null)
+            {
+                throw new Excepciones.ExcepcionCantidadIncorrectaDeProblematicasPsicologo();
+            }
             if (!(ProblematicasEspecializadas.Length == 3))
             {
                 throw new Excepciones.ExcepcionCantidadIncorrectaDeProblematicasPsicologo();
             }
-            Problematica_Psicologo.Problematica[] problematicas = new Problematica_Psicologo.Problematica[3];
 
+            Problematica_Psicologo.Problematica[] problematicas = new Problematica_Psicologo.Problematica[3];
             string unaProblematica = "";
 
             try
@@ -66,7 +70,7 @@ namespace WebApplication1.Models
             return problematicas;
         }
 
-      
+
 
         public PsicologoModel()
         {

@@ -58,11 +58,27 @@ namespace ElDescontracturante.LogicaDominioTest
         }
 
 
+        [TestMethod]
+        public void TestAgregarEspecialidad()
+        {
+            Problematica_Psicologo.Problematica[] problemas = new Problematica_Psicologo.Problematica[] { (ElDescontracturante.Dominio.Problematica_Psicologo.Problematica)Enum.Parse(typeof(ElDescontracturante.Dominio.Problematica_Psicologo.Problematica), "Ansiedad") };
+        
+            logicaPsicologo.Agregar(psicologo);
+            logicaPsicologo.AgregarEspecialidadEnProblematica("jorge@gmail.com", problemas);
+            mock.VerifyAll();
+        }
+
+
+
+
+
+
+
 
     }
 
 
 
 
-    }
+}
 

@@ -56,6 +56,10 @@ namespace ElDescontracturante.LogicaDominioTest
 
 
 
+
+
+
+
         [TestMethod]
         public void TestObtenerAudios()
         {
@@ -81,6 +85,39 @@ namespace ElDescontracturante.LogicaDominioTest
             mock.VerifyAll();
             Assert.AreEqual(audios, result);
         }
+
+
+
+
+        [TestMethod]
+        public void TestObtenerAudiosConLista()
+        {
+
+            var unidaddetiempo = (ElDescontracturante.Dominio.Audio.UnidadTiempo)Enum.Parse(typeof(ElDescontracturante.Dominio.Audio.UnidadTiempo), "Minuto");
+
+            audio = new Audio();
+            {
+                audio.Nombre = "Soltero Hasta la Tumba";
+                audio.Duracion = 4;
+                audio.UnidadDeTiempo = unidaddetiempo;
+                audio.NombreCreador = "El Reja";
+                audio.UrlImagen = "ElRejaSolteroHastaLaTumba.jpg";
+                audio.UrlMp3 = "ElRejaSolteroHastaLaTumba.mp3";
+            };
+
+            string[] audiosLista = new string[] { "jeje" };
+            Mock<IAudioRepositorio> mock = new Mock<IAudioRepositorio>();
+            List<Audio> audios = new List<Audio>();
+            audios.Add(audio);
+            mock.Setup(m => m.ObtenerAudios()).Returns(audios);
+            logicaAudio = new LogicaAudio(mock.Object);
+            var result = logicaAudio.ObtenerAudios();
+            var result2 = logicaAudio.ObtenerAudios(audiosLista);
+            mock.VerifyAll();
+            Assert.AreEqual(audios, result);
+        }
+
+
 
 
 

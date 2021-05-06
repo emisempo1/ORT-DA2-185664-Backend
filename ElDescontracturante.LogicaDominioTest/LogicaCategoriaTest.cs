@@ -15,6 +15,7 @@ namespace ElDescontracturante.LogicaDominioTest
         Categoria Categoria;
         LogicaCategoria logicaCategoria;
         Mock<ICategoriaRepositorio> mock;
+        Mock<IAudioRepositorio> mockAudio;
         List<Categoria> Categorias;
         Playlist playlist;
         List<Playlist> playlists;
@@ -37,8 +38,9 @@ namespace ElDescontracturante.LogicaDominioTest
             Categorias.Add(Categoria);
 
             mock = new Mock<ICategoriaRepositorio>();
+            mockAudio = new Mock<IAudioRepositorio>();
             mock.Setup(m => m.ObtenerCategoria("Dormir")).Returns(Categoria);
-            logicaCategoria = new LogicaCategoria(mock.Object);
+            logicaCategoria = new LogicaCategoria(mock.Object,mockAudio.Object);
 
         }
 

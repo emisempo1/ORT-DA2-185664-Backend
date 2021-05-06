@@ -10,7 +10,7 @@ namespace ElDescontracturante.Dominio
         [ForeignKey("PlaylistForeignKey")]
         public string NombrePlaylist { get; set; }
 
-        [ForeignKey("AudioForeignKey")]
+        [ForeignKey("AudiPlaForeignKey")]
         public string NombreAudio { get; set; }
     }
 }

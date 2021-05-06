@@ -41,6 +41,10 @@ namespace WebApplication1.Controllers
             {
                 return Conflict(e.Message);
             }
+            catch (Excepciones.ExcepcionCantidadIncorrectaDeProblematicasPsicologo e)
+            {
+                return Conflict(e.Message);
+            }
             catch (Excepciones.ExcepcionNombreProblematicaIncorrecta e)
             {
                 return NotFound(e.Message);

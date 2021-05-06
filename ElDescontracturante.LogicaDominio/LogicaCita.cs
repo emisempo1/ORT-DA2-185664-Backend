@@ -1,4 +1,4 @@
-﻿using ElDescontracturante.AccesoADatos.Repositorios;
+﻿
 using ElDescontracturante.Dominio;
 using ElDescontracturante.InterfazAccesoADatos;
 using ElDescontracturante.InterfazLogicaDominio;

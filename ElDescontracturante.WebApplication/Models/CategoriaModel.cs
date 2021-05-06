@@ -12,34 +12,24 @@ namespace WebApplication1.Models
 {
     public class CategoriaModel
     {
-
-   
-
         public CategoriaModel()
-        {
-            
+        {   
         }
 
-
         public string NombreCategoria { get; set; }
-
         public string[] ListaPlaylist { get; set; }
 
- 
         public Categoria ToEntity()
         {
             Categoria categoria = new Categoria();
-
             try
             {
                 categoria.NombreCategoria = (ElDescontracturante.Dominio.Categoria.NomCategoria)Enum.Parse(typeof(ElDescontracturante.Dominio.Categoria.NomCategoria), this.NombreCategoria);
-
             }
             catch (System.ArgumentException)
             {
                 throw new Excepciones.ExcepcionNombreCategoriaIncorrecta();
             }
-
              return categoria;
         }
 

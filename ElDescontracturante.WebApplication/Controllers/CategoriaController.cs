@@ -33,8 +33,14 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult AgregarPlaylistsACategoria(CategoriaModel categoriaModel)
         {
+            if (categoriaModel == null)
+            {
+                return BadRequest("Formato de JSON Incorrecto ");
+            }
+
             if (categoriaModel.NombreCategoria == null | categoriaModel.ListaPlaylist == null)
             {
+
                 return BadRequest("Formato de JSON Incorrecto ");
             }
 

@@ -1453,7 +1453,7 @@
       },
       "ElDescontracturante.LogicaDominio/1.0.0": {
         "dependencies": {
-          "ElDescontracturante.AccesoADatos": "1.0.0",
+          "ElDescontracturante.Excepciones": "1.0.0",
           "ElDescontracturante.InterfazAccesoADatos": "1.0.0",
           "ElDescontracturante.InterfazLogicaDominio": "1.0.0"
         },

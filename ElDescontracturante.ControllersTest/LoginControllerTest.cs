@@ -19,30 +19,30 @@ namespace Controllers.Tests
 
 
 
-        [TestClass]
-        public class LoginControllerTest
+    [TestClass]
+    public class LoginControllerTest
+    {
+        Administrador administrador;
+
+        Mock<ILogicaAdministrador> mockAdministrador;
+        Mock<ILogicaLogin> mockLogin;
+        List<Administrador> administradores;
+
+        LoginController controllerLogin;
+
+
+
+
+
+        [TestInitialize]
+        public void initialize()
         {
-            Administrador administrador;
-
-            Mock<ILogicaAdministrador> mockAdministrador;
-            Mock<ILogicaLogin> mockLogin;
-            List<Administrador> administradores;
-
-            LoginController controllerLogin;
-
-    
-
-
-
-            [TestInitialize]
-            public void initialize()
-            {
 
             mockLogin = new Mock<ILogicaLogin>();
             mockAdministrador = new Mock<ILogicaAdministrador>();
             Token tokenPrueba = new Token();
-        
-            controllerLogin = new LoginController(mockLogin.Object,mockAdministrador.Object);
+
+            controllerLogin = new LoginController(mockLogin.Object, mockAdministrador.Object);
 
             mockLogin.Setup(m => m.RegistrarToken()).Returns("tokendeprueba");
             mockLogin.Setup(m => m.BuscarToken("tokendeprueba"));
@@ -51,14 +51,24 @@ namespace Controllers.Tests
         }
 
 
-       [TestMethod]
+        [TestMethod]
         public void TestLoguearseOk()
         {
-          
+
             ActionResult result = controllerLogin.Loguearse("hola@gmail.com", "12345678");
-            var repuestaAAPIController = ((OkObjectResult)result).StatusCode; 
+            var repuestaAAPIController = ((OkObjectResult)result).StatusCode;
             Assert.AreEqual(200, repuestaAAPIController);
         }
+
+        [TestMethod]
+        public void TestLoguearseNull()
+        {
+
+            ActionResult result = controllerLogin.Loguearse(null, null);
+            var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode;
+            Assert.AreEqual(400, repuestaAAPIController);
+        }
+
 
 
         [TestMethod]
@@ -71,7 +81,19 @@ namespace Controllers.Tests
 
         }
 
+        [TestMethod]
+        public void TestLoguearseBdCaida()
+        {
+            mockAdministrador.Setup(m => m.Obtener(It.IsAny<string>(), It.IsAny<string>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+            controllerLogin = new LoginController(mockLogin.Object, mockAdministrador.Object);
+            ActionResult result = controllerLogin.Loguearse("hola@gmail.com", "12345678");
+            var repuestaAAPIController = ((ObjectResult)result).StatusCode;
+            Assert.AreEqual(500, repuestaAAPIController);
+        }
 
+
+
+      
 
 
 

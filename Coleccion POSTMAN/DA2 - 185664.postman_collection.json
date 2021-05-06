@@ -1,0 +1,1090 @@
+{
+	"info": {
+		"_postman_id": "c8396e11-6b68-4162-8689-b7ae8452965c",
+		"name": "DA2 - 185664",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AgregarAudio - 201 Created / 409 Conflict - besame el reja.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Besame\",\r\n  \"Duracion\": 4,\r\n  \"UnidadDeTiempo\": \"Minuto\",\r\n  \"NombreCreador\" : \"El Reja\",\r\n  \"UrlImagen\": \"https://res.cloudinary.com/bidoware/image/upload/v1618153761/ImagenesAudios/elrejabesame_s4zdgd.jpg\",\r\n  \"UrlMp3\":\"https://res.cloudinary.com/bidoware/video/upload/v1618153735/Audios/El_Reja_-_Besame_dxvxwg.mp3\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Audios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAudio - 201 Created / 409 Conflict -Soltero Hasta la Tumba",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Soltero Hasta la Tumba\",\r\n  \"Duracion\": 3,\r\n  \"UnidadDeTiempo\": \"Minuto\",\r\n  \"NombreCreador\" : \"El Reja\",\r\n  \"UrlImagen\": \"https://res.cloudinary.com/bidoware/image/upload/v1618094458/ImagenesAudios/ElRejaSolteroHastaLaTumba_ajfvmk.jpg\",\r\n  \"UrlMp3\":\"https://res.cloudinary.com/bidoware/video/upload/v1618091230/Audios/ElRejaSolteroHastaLaTumba_uirmx4.mp3\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Audios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAudio - 201 Created / 409 Conflict - vas insegura cumbiacheta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Besame\",\r\n  \"Duracion\": 4,\r\n  \"UnidadDeTiempo\": \"Minuto\",\r\n  \"NombreCreador\" : \"El Reja\",\r\n  \"UrlImagen\": \"https://res.cloudinary.com/bidoware/image/upload/v1618153761/ImagenesAudios/elrejabesame_s4zdgd.jpg\",\r\n  \"UrlMp3\":\"https://res.cloudinary.com/bidoware/video/upload/v1618153735/Audios/El_Reja_-_Besame_dxvxwg.mp3\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Audios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAudio - 201 Created / 409 Conflict - El  Dipy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Besame\",\r\n  \"Duracion\": 4,\r\n  \"UnidadDeTiempo\": \"Minuto\",\r\n  \"NombreCreador\" : \"El Reja\",\r\n  \"UrlImagen\": \"https://res.cloudinary.com/bidoware/image/upload/v1618153761/ImagenesAudios/elrejabesame_s4zdgd.jpg\",\r\n  \"UrlMp3\":\"https://res.cloudinary.com/bidoware/video/upload/v1618153735/Audios/El_Reja_-_Besame_dxvxwg.mp3\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Audios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Audio - 200 OK / 404 Not Found - El  Dipy Porrom",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Audios?nombre=El porrom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "El porrom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerAudios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44338/api/Audios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Audios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylist - 201 Cachengue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Nombre\" : \"Cachengue\",\r\n\"Descripcion\": \"Para Escabiar y pasarla bien con tus panas\",\r\n\"Url\": \"https://res.cloudinary.com/bidoware/image/upload/v1618094494/ImagenesPlaylist/cachengue_f86nkw.jpg\",\r\n\"ListaAudio\": [\r\n         \"Soltero Hasta la Tumba\",\r\n         \"ElAudioInexistente\",\r\n         \"Besame\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylist - 201 Cumbia Cheta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Nombre\" : \"Cachengue\",\r\n\"Descripcion\": \"Para Escabiar y pasarla bien con tus panas\",\r\n\"Url\": \"https://res.cloudinary.com/bidoware/image/upload/v1618094494/ImagenesPlaylist/cachengue_f86nkw.jpg\",\r\n\"ListaAudio\": [\r\n         \"Soltero Hasta la Tumba\",\r\n         \"ElAudioInexistente\",\r\n         \"Besame\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylist - 201 Buenas Vibras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Nombre\" : \"Cachengue\",\r\n\"Descripcion\": \"Para Escabiar y pasarla bien con tus panas\",\r\n\"Url\": \"https://res.cloudinary.com/bidoware/image/upload/v1618094494/ImagenesPlaylist/cachengue_f86nkw.jpg\",\r\n\"ListaAudio\": [\r\n         \"Soltero Hasta la Tumba\",\r\n         \"ElAudioInexistente\",\r\n         \"Besame\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylist - AudioInexistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Nombre\" : \"Cachengue\",\r\n\"Descripcion\": \"Para Escabiar y pasarla bien con tus panas\",\r\n\"Url\": \"https://res.cloudinary.com/bidoware/image/upload/v1618094494/ImagenesPlaylist/cachengue_f86nkw.jpg\",\r\n\"ListaAudio\": [\r\n         \"Soltero Hasta la Tumba\",\r\n         \"ElAudioInexistente\",\r\n         \"Besame\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerPlaylist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylistACategoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"NombreCategoria\" : \"Dormir\",\r\n\"ListaPlaylist\": [\r\n         \"Cachengue\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylistACategoria-PlaylistInexistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"NombreCategoria\" : \"Dormir\",\r\n\"ListaPlaylist\": [\r\n         \"Cachuengue\",\r\n         \"Besame\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylistACategoria-ModeloNulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPlaylistACategoria- CategoriaIncorrecta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"NombreCategoria\" : \"Chill\",\r\n\"ListaPlaylist\": [\r\n         \"Cachengue\"\r\n         ]\r\n\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCategoria - OK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "nombre",
+						"value": "Cachuengue",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Cachuengue",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria?nombre=Dormir",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Dormir"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCategoria - NombreIncorrecto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "nombre",
+						"value": "Cachuengue",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Cachuengue",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria?nombre=Cachuengue",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Cachuengue"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCategoria - Sin parametro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "nombre",
+						"value": "Cachuengue",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Cachuengue",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Categoria",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAdministrador-TokenIvalido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Carlos\",\r\n  \"Email\":\"calrlitos@gmail.com\",\r\n  \"Password\": \"cerrolargo\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Administrador",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAdministrador - Modelo Invalido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "37546515-f645-4509-9274-35d47adb2be9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Administrador",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarAdministrador-TokenValido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "37546515-f645-4509-9274-35d47adb2be9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Carlos\",\r\n  \"Email\":\"calrlitos@gmail.com\",\r\n  \"Password\": \"cerrolargo\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Administrador",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "carola",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Carlos\",\r\n  \"Email\":\"calrlitos@gmail.com\",\r\n  \"Password\": \"cerrolargo\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Login?email=root&password=root",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "root"
+						},
+						{
+							"key": "password",
+							"value": "root"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPsicologo  - 201: Creado  /409 Conflicto : Psicologo Duplicado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "98dd8635-868b-46bb-b599-23c57a3c966c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Email\":\"avatrroku @gmail.com\",\r\n   \"Nombre\": \"Roku\",\r\n  \"ProblematicasEspecializadas\": [\r\n         \"Depresion\",\r\n         \"Estres\",\r\n         \"Ansiedad\"\r\n         ],\r\n \"FechaIngreso\": \"1995-05-05\",  \r\n\"DireccionFisica\": \"cerrolargo 2040\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPsicologo  - Luis Suarez",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "98dd8635-868b-46bb-b599-23c57a3c966c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Email\":\"avatrroku @gmail.com\",\r\n   \"Nombre\": \"Roku\",\r\n  \"ProblematicasEspecializadas\": [\r\n         \"Depresion\",\r\n         \"Estres\",\r\n         \"Ansiedad\"\r\n         ],\r\n \"FechaIngreso\": \"1995-05-05\",  \r\n\"DireccionFisica\": \"cerrolargo 2040\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPsicologo- 401 Inautorizado : Token de Administrador Invalido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "carola"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"Email\":\"calrlitos@gmail.com\",\r\n   \"Nombre\": \"Carlos\",\r\n  \"Password\": \"cerrolargo\",\r\n  \"Tipo de Consulta\": \"VideoLlamada\",\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPsicologo - 404 not found : Modo De Consulta no existe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "37546515-f645-4509-9274-35d47adb2be9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"Email\":\"carlitoselpsicologo@gmail.com\",\r\n   \"Nombre\": \"Carlos\",\r\n  \"Password\": \"cerrolargo\",\r\n  \"TipodeConsulta\": \"Al Aire Libre\",\r\n  \"ProblematicasEspecializadas\": [\r\n         \"Depresion\",\r\n         \"Estres\",\r\n         \"Ansiedad\"\r\n         ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarPsicologo - 404 not found : Especializaciones que no existen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "37546515-f645-4509-9274-35d47adb2be9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"Email\":\"luissuarez@gmail.com\",\r\n   \"Nombre\": \"Luis\",\r\n  \"Password\": \"12345678\",\r\n  \"TipodeConsulta\": \"VideoLlamada\",\r\n  \"ProblematicasEspecializadas\": [\r\n         \"Magia Negra\",\r\n         \"Adicciones\",\r\n         \"El amor de ella\"\r\n         ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPsicologo - 200OK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "37546515-f645-4509-9274-35d47adb2be9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"Email\":\"luissuarez@gmail.com\",\r\n   \"Nombre\": \"Luis\",\r\n  \"Password\": \"12345678\",\r\n  \"TipodeConsulta\": \"VideoLlamada\",\r\n  \"ProblematicasEspecializadas\": [\r\n         \"Magia Negra\",\r\n         \"Adicciones\",\r\n         \"El amor de ella\"\r\n         ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Psicologo?email=luissuarez@gmail.com",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Psicologo"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "luissuarez@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarCita  - 201: Creado  /409 Conflicto , Anibal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "98dd8635-868b-46bb-b599-23c57a3c966c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Celular\": \"094556723\",\r\n   \"Email\":\"anibal@gmail.com\",\r\n   \"Nombre\": \"Anibal\",\r\n   \"FechaNacimiento\":  \"1982-05-05 \",\r\n   \"Problematica\": \"Depresion\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Solicitud",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Solicitud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarCita  - 201: Creado  /409 Conflicto ,  Marta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "98dd8635-868b-46bb-b599-23c57a3c966c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Celular\": \"094556723\",\r\n   \"Email\":\"anibal@gmail.com\",\r\n   \"Nombre\": \"Anibal\",\r\n   \"FechaNacimiento\":  \"1982-05-05 \",\r\n   \"Problematica\": \"Depresion\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Solicitud",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Solicitud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarCita  - 404: Psicologos no encontrados: Especializados en Problematica.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "37546515-f645-4509-9274-35d47adb2be9"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Celular\": \"094556723\",\r\n   \"Email\":\"anibal@gmail.com\",\r\n   \"Nombre\": \"Anibal\",\r\n   \"FechaNacimiento\":  \"1982-05-05 \",\r\n   \"Problematica\": \"Duelo\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44338/api/Solicitud",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44338",
+					"path": [
+						"api",
+						"Solicitud"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

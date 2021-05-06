@@ -10,7 +10,7 @@ namespace ElDescontracturante.Dominio
 
         public int Duracion { get; set; }
 
-        public UnidadTiempo UnidadDeTiempo { get; set; }
+       public UnidadTiempo UnidadDeTiempo { get; set; }
 
         public enum UnidadTiempo { Minuto, Hora }
 
