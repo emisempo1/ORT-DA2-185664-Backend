@@ -18,12 +18,12 @@ namespace WebApplication1.Controllers
    
 
 
-    public class CategoriaController : ControllerBase
+    public class CategoriasController : ControllerBase
     {
       private readonly ILogicaCategoria logicaCategoria;
       private readonly ILogicaPlaylist logicaPlaylist;
 
-        public CategoriaController(ILogicaPlaylist logicaPlaylist, ILogicaCategoria logicaCategoria )
+        public CategoriasController(ILogicaPlaylist logicaPlaylist, ILogicaCategoria logicaCategoria )
         {
             this.logicaCategoria = logicaCategoria;
             this.logicaPlaylist = logicaPlaylist;

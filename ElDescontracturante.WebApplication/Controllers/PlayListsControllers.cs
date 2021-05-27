@@ -66,22 +66,25 @@ namespace WebApplication1.Controllers
 
 
 
-
         [HttpGet]
-        public ActionResult Obtenerplaylists()
+        public ActionResult ObtenerPlaylist(string nombre)
         {
-            List<Playlist> playlists = new List<Playlist>();
-           
+            Playlist playlist = new Playlist();
+
             try
             {
-                playlists =  this.logicaPlaylist.Obtenerplaylists(); 
+                playlist = this.logicaPlaylist.ObtenerPlaylist(nombre);
             }
             catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
                 return StatusCode(500, e.Message);
             }
+            catch (Excepciones.ExcepcionPlaylistInexistente e)
+            {
+                return NotFound(e.Message);
+            }
 
-            return Ok(JsonConvert.SerializeObject(playlists));
+            return Ok(JsonConvert.SerializeObject(playlist));
 
         }
 

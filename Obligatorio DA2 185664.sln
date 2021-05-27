@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElDescontracturante.AccesoA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElDescontracturante.WebApplication", "ElDescontracturante.WebApplication\ElDescontracturante.WebApplication.csproj", "{59C40A3E-DCC1-470E-A572-DB314BDAF62C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElDescontracturante.ControllersTest", "ElDescontracturante.ControllersTest\ElDescontracturante.ControllersTest.csproj", "{50F710AB-9CB0-46F5-A999-290F09771090}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElDescontracturante.ControllersTest", "ElDescontracturante.ControllersTest\ElDescontracturante.ControllersTest.csproj", "{50F710AB-9CB0-46F5-A999-290F09771090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElDescontracturante.LogicaDominioTest", "ElDescontracturante.LogicaDominioTest\ElDescontracturante.LogicaDominioTest.csproj", "{FA725DD0-E93E-4DD3-8F6E-DC73229E162D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElDescontracturante.LogicaDominioTest", "ElDescontracturante.LogicaDominioTest\ElDescontracturante.LogicaDominioTest.csproj", "{FA725DD0-E93E-4DD3-8F6E-DC73229E162D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,7 +15,7 @@ namespace Controllers.Tests
 
 
     [TestClass]
-    public class CategoriaControllerTest
+    public class CategoriasControllerTest
     {
         Mock<ILogicaPlaylist> mockPlaylist;
         Mock<ILogicaAudio> mockAudio;
@@ -23,7 +23,7 @@ namespace Controllers.Tests
         Mock<ILogicaCategoria> mockCategoria;
 
         PlayListsController controllerPlaylist;
-        CategoriaController controllerCategoria;
+        CategoriasController controllerCategoria;
 
 
         [TestInitialize]
@@ -34,7 +34,7 @@ namespace Controllers.Tests
             mockCategoria = new Mock<ILogicaCategoria>();
 
             controllerPlaylist = new PlayListsController(mockPlaylist.Object, mockAudio.Object);
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
         }
 
 
@@ -55,7 +55,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistInexistenteAACategoria()
         {
             mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionPlaylistInexistente("playlistInexistente"));
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -72,7 +72,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistInexistenteNull()
         {
             
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -87,7 +87,7 @@ namespace Controllers.Tests
         public void TestAagregarCategoriaInexistente()
         {
             mockCategoria.Setup(m => m.AgregarPlaylistsACategoria(It.IsAny<Categoria>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -106,7 +106,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistALaMismaCategoriaDosveces()
         {
             mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionPlaylistYaAsociadaACategoria("categoria","playlistInexistente"));
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -123,7 +123,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistBdCaida()
         {
             mockPlaylist.Setup(m => m.ObtenerPlaylist(It.IsAny<string[]>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -138,7 +138,7 @@ namespace Controllers.Tests
         [TestMethod]
         public void TestAagregarPlaylistACategoriaNull()
         {
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
             ActionResult result = controllerCategoria.AgregarPlaylistsACategoria(null);
             var repuestaAAPIController = ((BadRequestObjectResult)result).StatusCode;
             Assert.AreEqual(400, repuestaAAPIController);
@@ -148,7 +148,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistListaPlaylistNull()
         {
        
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -165,7 +165,7 @@ namespace Controllers.Tests
         public void TestAagregarPlaylistACategoriaincorrecta()
         {
             mockCategoria.Setup(m => m.AgregarPlaylistsACategoria(It.IsAny<Categoria>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
 
             CategoriaModel categoriaModel = new CategoriaModel()
             {
@@ -192,7 +192,7 @@ namespace Controllers.Tests
         public void TestObtenerCategoriaNombreIncorrecto()
         {
             mockCategoria.Setup(m => m.ObtenerCategoria(It.IsAny<string>())).Throws(new Excepciones.ExcepcionNombreCategoriaIncorrecta());
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
             ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
             var repuestaAAPIController = ((NotFoundObjectResult)result).StatusCode; 
             Assert.AreEqual(404, repuestaAAPIController);
@@ -202,7 +202,7 @@ namespace Controllers.Tests
         public void TestObtenerCategoriaMotorBaseDeDatosCaido()
         {
             mockCategoria.Setup(m => m.ObtenerCategoria(It.IsAny<string>())).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
-            controllerCategoria = new CategoriaController(mockPlaylist.Object, mockCategoria.Object);
+            controllerCategoria = new CategoriasController(mockPlaylist.Object, mockCategoria.Object);
             ActionResult result = controllerCategoria.ObtenerCategoria("Dormir");
             var repuestaAAPIController = ((ObjectResult)result).StatusCode; 
             Assert.AreEqual(500, repuestaAAPIController);

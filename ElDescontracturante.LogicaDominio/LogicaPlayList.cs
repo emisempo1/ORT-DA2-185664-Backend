@@ -39,16 +39,13 @@ namespace ElDescontracturante.LogicaDominio
             return playlistsaretornar;
         }
 
-        public List<Playlist> Obtenerplaylists()
+        public Playlist ObtenerPlaylist(string nombre)
         {
-            List<Playlist> playlistsaretornar = new List<Playlist>();
-            playlistsaretornar = playlistRepositorio.ObtenerPlaylist();
+            Playlist playlistsaretornar = new Playlist();
+            playlistsaretornar = playlistRepositorio.ObtenerPlaylist(nombre);
 
-            for (int i = 0; i < playlistsaretornar.Count; i++)
-            {
-                playlistsaretornar[i].ListaAudios = audioRepositorio.ObtenerAudios(playlistsaretornar[i]);
-            }
-
+            playlistsaretornar.ListaAudios = audioRepositorio.ObtenerAudios(playlistsaretornar);
+            
             return playlistsaretornar;
         }
 

@@ -45,9 +45,21 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
         }
 
 
-        public List<Playlist> ObtenerPlaylist()
+        public Playlist ObtenerPlaylist(string nombre)
         {
-             return this.context.Set<Playlist>().ToList();
+           
+            List<Playlist> listaplaylists =  this.context.Set<Playlist>().ToList();
+
+            for (int j = 0; j < listaplaylists.Count; j++)
+            {
+                if (nombre.Equals(listaplaylists[j].Nombre))
+                {
+                    return listaplaylists[j];
+                }
+            }
+
+            throw new Excepciones.ExcepcionPlaylistInexistente(nombre);
+
         }
 
         public List<Playlist> ObtenerPlaylist(string[] nombres)

@@ -115,7 +115,7 @@ namespace Controllers.Tests
         [TestMethod]
         public void TestObtenerPlaylist()
         {       
-            ActionResult result = controllerPlaylist.Obtenerplaylists();
+            ActionResult result = controllerPlaylist.ObtenerPlaylist("Cachuengue");
             var repuestaAAPIController = ((OkObjectResult)result).StatusCode; // <-- Cast is before using it.
             Assert.AreEqual(200, repuestaAAPIController);
         }
@@ -123,9 +123,9 @@ namespace Controllers.Tests
         [TestMethod]
         public void TestObtenerPlaylistConBdCaida()
         {
-            mockPlaylist.Setup(m => m.Obtenerplaylists()).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
+            mockPlaylist.Setup(m => m.ObtenerPlaylist("Cachuengue")).Throws(new Excepciones.ExcepcionMotorBaseDeDatosCaido());
             controllerPlaylist = new PlayListsController(mockPlaylist.Object, mockAudio.Object);
-            ActionResult result = controllerPlaylist.Obtenerplaylists();
+            ActionResult result = controllerPlaylist.ObtenerPlaylist("Cachuengue");
             var repuestaAAPIController = ((ObjectResult)result).StatusCode;
             Assert.AreEqual(500, repuestaAAPIController);
         }

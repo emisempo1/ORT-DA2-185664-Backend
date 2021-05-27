@@ -13,53 +13,42 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LoginController : ControllerBase
+    public class TokenController : ControllerBase
     {
-        private readonly ILogicaAdministrador logicaAdministrador;
         private readonly ILogicaLogin logicaLogin;
 
    
 
-        public LoginController(ILogicaLogin logicaLogin, ILogicaAdministrador logicaAdministrador)
+        public TokenController(ILogicaLogin logicaLogin)
         {
   
             this.logicaLogin = logicaLogin;
-            this.logicaAdministrador = logicaAdministrador;
         }
 
         public ILogicaAdministrador Object { get; }
 
+       
         [HttpGet]
-        public ActionResult Loguearse(string email, string password)
-        {
-            Guid g = Guid.NewGuid();
-            string token = g.ToString();
-
-            if (email == null | password == null)
+        public ActionResult ComprobarToken(string token)
+        {    
+            if (token == null)
             {
                 return BadRequest("Query Param Incorrecto");
             }
-
             try
             {
-                logicaAdministrador.Obtener(email, password);
-                token = logicaLogin.RegistrarToken();
+                logicaLogin.BuscarToken(token);
             }
-            catch (Excepciones.ExcepcionAdministradorInexistente e)
+            catch (Excepciones.ExcepcionTokenInexistente e)
             {
-                return NotFound(e.Message);
+                return StatusCode(401, e.Message);
             }
             catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
                 return StatusCode(500, e.Message);
             }
 
-            Token unToken = new Token();
-            unToken.Id = token;
-            unToken.Fecha = DateTime.Now;
-
-            return Ok(JsonConvert.SerializeObject(unToken));
-
+            return Ok(JsonConvert.SerializeObject(true));
         }
 
 

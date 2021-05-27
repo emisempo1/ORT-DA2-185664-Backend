@@ -8,7 +8,7 @@ namespace ElDescontracturante.InterfazAccesoADatos
     public interface IPlaylistRepositorio
     {
         void Agregar(Playlist unaPlaylist);
-        List<Playlist> ObtenerPlaylist();
+        Playlist ObtenerPlaylist(string nombre);
 
         List<Playlist> ObtenerPlaylist(string[] nombre);
     }

@@ -31,7 +31,7 @@ namespace ElDescontracturante.LogicaDominioTest
             playlists.Add(playlist);
 
             mock = new Mock<IPlaylistRepositorio>();
-            mock.Setup(m => m.ObtenerPlaylist()).Returns(playlists);
+            mock.Setup(m => m.ObtenerPlaylist("Cachuengue")).Returns(playlists[0]);
             mockAudio = new Mock<IAudioRepositorio>();
             logicaPlaylist = new LogicaPlayList(mock.Object,mockAudio.Object);
 
@@ -44,16 +44,16 @@ namespace ElDescontracturante.LogicaDominioTest
         public void TestAñadirPlaylist()
         {
             logicaPlaylist.Agregar(playlist);
-            var result = logicaPlaylist.Obtenerplaylists();
+            var result = logicaPlaylist.ObtenerPlaylist("Cachuengue");
             mock.VerifyAll();
-            Assert.AreEqual(playlist, result[0]);
+            Assert.AreEqual(playlist, result);
         }
 
 
         [TestMethod]
         public void TestObtenerPlaylist()
         {
-            var result = logicaPlaylist.Obtenerplaylists();
+            var result = logicaPlaylist.ObtenerPlaylist("Cachuengue");
             mock.VerifyAll();
             Assert.AreEqual(playlists, result);
         }

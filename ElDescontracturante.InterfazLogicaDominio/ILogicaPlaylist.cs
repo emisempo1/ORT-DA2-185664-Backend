@@ -8,7 +8,7 @@ namespace ElDescontracturante.InterfazLogicaDominio
    public interface ILogicaPlaylist
     {
         void Agregar(Playlist unplaylist);
-        List<Playlist> Obtenerplaylists();
+        Playlist ObtenerPlaylist(string nombre);
         public List<Playlist> ObtenerPlaylist(string[] nombre);
     }
 }

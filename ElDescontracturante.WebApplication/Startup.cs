@@ -29,6 +29,14 @@ namespace ElDescontracturante.WebApplication
             services.AddControllers();
             services.AddControllersWithViews();
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+
             ServiceFactory serviceFactory = new ServiceFactory(services);
             serviceFactory.AddCustomServices();
             serviceFactory.AddDbContextService();
@@ -45,6 +53,8 @@ namespace ElDescontracturante.WebApplication
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("MyPolicy");
 
             app.UseAuthorization();
 
