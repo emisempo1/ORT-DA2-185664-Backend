@@ -20,3 +20,5 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\obj\
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\obj\Debug\netcoreapp3.1\ElDescontracturante.Factory.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\obj\Debug\netcoreapp3.1\ElDescontracturante.Factory.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\obj\Debug\netcoreapp3.1\ElDescontracturante.Factory.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Factory\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb

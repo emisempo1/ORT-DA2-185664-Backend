@@ -44,6 +44,7 @@ namespace WebApplication1.Controllers
                 playlist = playlistmodel.ToEntity();
                 playlist.ListaAudios = logicaAudio.ObtenerAudios(playlistmodel.ListaAudio);
                 this.logicaPlaylist.Agregar(playlist);
+                this.logicaPlaylist.AgregarAsociaciones(playlist);
             }
             catch (ExcepcionPlaylistDuplicado e)
             {

@@ -7,10 +7,17 @@ namespace ElDescontracturante.Dominio
 {
     public class Playlist_Audio
     {
-        [ForeignKey("PlaylistForeignKey")]
+        
         public string NombrePlaylist { get; set; }
 
-        [ForeignKey("AudiPlaForeignKey")]
+       
         public string NombreAudio { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Playlist_Audio audio &&
+                   NombrePlaylist == audio.NombrePlaylist &&
+                   NombreAudio == audio.NombreAudio;
+        }
     }
 }

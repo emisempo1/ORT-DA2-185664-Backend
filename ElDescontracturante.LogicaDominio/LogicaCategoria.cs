@@ -23,23 +23,34 @@ namespace ElDescontracturante.LogicaDominio
          categoriaRepositorio.AgregarPlaylistsACategoria(unaCategoria);
         }
 
+        public void AgregarPlaylistACategoriaOmitiendoRepetidos(Categoria.NomCategoria nombreCategoria, Playlist unaPlaylist)
+        {
+                Categoria_Playlist unaAsociacion = new Categoria_Playlist();
+                unaAsociacion.NombrePlaylist = unaPlaylist.Nombre;
+                unaAsociacion.Categoria = nombreCategoria;
+
+                List<Categoria_Playlist> asociaciones = categoriaRepositorio.ObtenerAsociaciones();
+
+                if (!asociaciones.Contains(unaAsociacion))
+                {
+                    categoriaRepositorio.AgregarPlaylistACategoria(unaAsociacion);
+                }
+                
+        }        
+        
+
         public Categoria ObtenerCategoria(string nombre)
         {
-        
             Categoria categoria = categoriaRepositorio.ObtenerCategoria(nombre);
-
             List<Playlist> playlistConAudios = categoria.ListaPlaylist;
-         
-
+        
             for (int i = 0; i < playlistConAudios.Count; i++)
             {
                 playlistConAudios[i].ListaAudios = audioRepositorio.ObtenerAudios(playlistConAudios[i]);
 
             }
-
             categoria.ListaPlaylist = playlistConAudios;
-
-            return categoria;
+           return categoria;
 
         }
 

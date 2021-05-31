@@ -24,7 +24,6 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
             try
             {
-
                 cp.Categoria = unaCategoria.NombreCategoria;
 
                 for (int i = 0; i < unaCategoria.ListaPlaylist.Count; i++)
@@ -44,6 +43,31 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
                 throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
             }
         }
+
+        public void AgregarPlaylistACategoria(Categoria_Playlist cp)
+        {
+            try
+            {
+                this.context.Add(cp);
+                this.context.SaveChanges();
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+            {
+                throw new Excepciones.ExcepcionPlaylistYaAsociadaACategoria(cp.Categoria.ToString(), cp.NombrePlaylist);
+            }
+            catch (Microsoft.Data.SqlClient.SqlException)
+            {
+                throw new Excepciones.ExcepcionMotorBaseDeDatosCaido();
+            }
+        }
+
+
+        public List<Categoria_Playlist> ObtenerAsociaciones()
+        {
+            return this.context.Set<Categoria_Playlist>().ToList();
+        }
+
+
 
         public Categoria ObtenerCategoria(string nombre)
         {

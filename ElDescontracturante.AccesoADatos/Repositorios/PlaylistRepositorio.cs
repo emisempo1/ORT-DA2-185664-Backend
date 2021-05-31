@@ -23,32 +23,32 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             try
             {
                 this.context.Add(unaPlaylist);
-
-                for (int i = 0; i < unaPlaylist.ListaAudios.Count; i++)
-                {
-                    Playlist_Audio playlistAudio = new Playlist_Audio();
-                    playlistAudio.NombrePlaylist = unaPlaylist.Nombre;
-                    playlistAudio.NombreAudio = unaPlaylist.ListaAudios[i].Nombre;
-                    this.context.Add(playlistAudio);
-                }
-
                 this.context.SaveChanges();
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateException)
             {
                 throw new Excepciones.ExcepcionPlaylistDuplicado();
             }
-            catch (System.InvalidOperationException)
-            {
-                throw new Excepciones.ExcepcionPlaylistDuplicado();
-            }
+        }
+
+     
+        public void AgregarAsociacion(Playlist_Audio unaAsociacion)
+        {
+            this.context.Add(unaAsociacion);
+            this.context.SaveChanges();
+        }
+
+
+        public List<Playlist_Audio> ObtenerAsociaciones()
+        {
+            return this.context.Set<Playlist_Audio>().ToList();
         }
 
 
         public Playlist ObtenerPlaylist(string nombre)
         {
-           
-            List<Playlist> listaplaylists =  this.context.Set<Playlist>().ToList();
+
+            List<Playlist> listaplaylists = this.context.Set<Playlist>().ToList();
 
             for (int j = 0; j < listaplaylists.Count; j++)
             {
@@ -94,6 +94,13 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
 
             return listaplaylistsARetornar;
         }
+
+        public List<Playlist> ObtenerPlaylist()
+        {
+          return  this.context.Set<Playlist>().ToList();
+        }
+
+
 
 
     }

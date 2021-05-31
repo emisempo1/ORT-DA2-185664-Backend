@@ -5,8 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ElDescontracturante.Excepciones\ElDescontracturante.Excepciones.csproj" />
     <ProjectReference Include="..\ElDescontracturante.InterfazAccesoADatos\ElDescontracturante.InterfazAccesoADatos.csproj" />
+    <ProjectReference Include="..\ElDescontracturante.InterfazImportacion\ElDescontracturante.InterfazImportacion.csproj" />
     <ProjectReference Include="..\ElDescontracturante.InterfazLogicaDominio\ElDescontracturante.InterfazLogicaDominio.csproj" />
   </ItemGroup>
 

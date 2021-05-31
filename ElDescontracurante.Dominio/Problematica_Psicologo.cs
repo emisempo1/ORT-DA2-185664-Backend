@@ -8,7 +8,7 @@ namespace ElDescontracturante.Dominio
     public class Problematica_Psicologo
     {
 
-        [ForeignKey("PsicologoForeignKey")]
+
         public string Email { get; set; }
         public Problematica NombreProblematica { get; set; }
         public enum Problematica {Depresion,Estres, Ansiedad, Autoestima, Enojo, Relaciones, Duelo, Otros }

@@ -8,6 +8,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
     {
         public void Agregar(Audio unAudio);
 
+        void AgregarOmitiendoRepetidos(List<Audio> Audios);
+
         public List<Audio> ObtenerAudios();
 
         List<Audio> ObtenerAudios(string[] nombre);

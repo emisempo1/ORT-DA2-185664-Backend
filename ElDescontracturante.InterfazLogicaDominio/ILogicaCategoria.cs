@@ -9,6 +9,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
     {
         public void AgregarPlaylistsACategoria(Categoria unaCategoria);
 
+        void AgregarPlaylistACategoriaOmitiendoRepetidos(Categoria.NomCategoria nombreCategoria, Playlist unaPlaylist);
+
         Categoria ObtenerCategoria(string nombre);
 
 

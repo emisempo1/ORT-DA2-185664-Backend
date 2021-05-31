@@ -29,10 +29,7 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             {
                 throw new Excepciones.ExcepcionAudioDuplicado();
             }
-            catch (System.InvalidOperationException)
-            {
-                throw new Excepciones.ExcepcionAudioDuplicado();
-            }
+          
         }
 
         public void Eliminar(Audio unAudio)

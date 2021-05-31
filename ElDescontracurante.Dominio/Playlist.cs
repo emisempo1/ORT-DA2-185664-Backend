@@ -13,6 +13,10 @@ namespace ElDescontracturante.Dominio
 
         public List<Audio> ListaAudios = new List<Audio>();
 
-
+        public override bool Equals(object obj)
+        {
+            return obj is Playlist playlist &&
+                   Nombre == playlist.Nombre;
+        }
     }
 }

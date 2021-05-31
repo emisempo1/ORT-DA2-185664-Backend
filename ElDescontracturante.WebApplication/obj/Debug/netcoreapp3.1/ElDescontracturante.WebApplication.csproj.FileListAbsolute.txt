@@ -75,3 +75,5 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplicati
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.pdb
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\obj\Debug\netcoreapp3.1\ElDescontracturante.WebApplication.genruntimeconfig.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.WebApplication\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb

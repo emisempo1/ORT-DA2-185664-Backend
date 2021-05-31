@@ -20,6 +20,17 @@ namespace ElDescontracturante.LogicaDominio
         {
             audioRepositorio.Agregar(unAudio);
         }
+        public void AgregarOmitiendoRepetidos(List<Audio> audios)
+        {       
+            for (int i = 0; i < audios.Count; i++)
+            {
+                List<Audio> audiosExistentes = this.ObtenerAudios();
+                if (!audiosExistentes.Contains(audios[i]))
+                {
+                    this.Agregar(audios[i]);
+                }           
+            }         
+        }
 
         public void Borrar(string nombre)
         {

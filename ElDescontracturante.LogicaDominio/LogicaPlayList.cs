@@ -6,14 +6,11 @@ using System.Collections.Generic;
 
 namespace ElDescontracturante.LogicaDominio
 {
-    public class LogicaPlayList:ILogicaPlaylist
+    public class LogicaPlayList : ILogicaPlaylist
     {
 
-        
-        Playlist unaPlaylist;
         private readonly IPlaylistRepositorio playlistRepositorio;
         private readonly IAudioRepositorio audioRepositorio;
-        LogicaAudio logicaAudio;
 
         public LogicaPlayList(IPlaylistRepositorio playlistRepositorio, IAudioRepositorio audioRepositorio)
         {
@@ -24,6 +21,27 @@ namespace ElDescontracturante.LogicaDominio
         public void Agregar(Playlist unplaylist)
         {
             playlistRepositorio.Agregar(unplaylist);
+        }
+
+        public void AgregarAsociaciones(Playlist unaPlaylist)
+        {
+            for (int i = 0; i < unaPlaylist.ListaAudios.Count; i++)
+            {
+                Playlist_Audio playlistAudio = new Playlist_Audio();
+                playlistAudio.NombrePlaylist = unaPlaylist.Nombre;
+                playlistAudio.NombreAudio = unaPlaylist.ListaAudios[i].Nombre;
+                playlistRepositorio.AgregarAsociacion(playlistAudio);
+            }
+        }
+
+
+        public void AgregarAsociacion(Playlist_Audio unaAsociacion)
+        {
+            List<Playlist_Audio> asociaciones = playlistRepositorio.ObtenerAsociaciones();
+            if (!asociaciones.Contains(unaAsociacion))
+            {
+                playlistRepositorio.AgregarAsociacion(unaAsociacion);
+            }
         }
 
         public List<Playlist> ObtenerPlaylist(string[] nombre)
@@ -39,18 +57,28 @@ namespace ElDescontracturante.LogicaDominio
             return playlistsaretornar;
         }
 
+
         public Playlist ObtenerPlaylist(string nombre)
         {
             Playlist playlistsaretornar = new Playlist();
             playlistsaretornar = playlistRepositorio.ObtenerPlaylist(nombre);
-
             playlistsaretornar.ListaAudios = audioRepositorio.ObtenerAudios(playlistsaretornar);
-            
             return playlistsaretornar;
         }
 
-      
-    }
+
+        public void AgregarOmitiendoRepetidos(Playlist unaPlaylist)
+        {
+            List<Playlist> playlists = playlistRepositorio.ObtenerPlaylist();
+
+            if (!playlists.Contains(unaPlaylist))
+            {
+                this.Agregar(unaPlaylist);
+            }
+        }
+
+
+}
 }
 
 

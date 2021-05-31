@@ -27,9 +27,15 @@ namespace ElDescontracturante.Dominio
             UnidadDeTiempo = unidadDeTiempo;
         }
 
+
         public Audio()
         {
             
+        }
+        public override bool Equals(object obj)
+        {
+            return obj is Audio audio &&
+                   Nombre == audio.Nombre;
         }
     }
 }

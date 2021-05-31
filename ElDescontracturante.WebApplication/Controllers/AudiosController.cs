@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AudiosController : ControllerBase
+    public class    AudiosController : ControllerBase
     {
       private readonly ILogicaAudio logicaAudio;
 

@@ -153,3 +153,5 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDomini
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominioTest\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominioTest.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominioTest\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominioTest.pdb
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominioTest\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominioTest.genruntimeconfig.cache
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominioTest\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominioTest\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb

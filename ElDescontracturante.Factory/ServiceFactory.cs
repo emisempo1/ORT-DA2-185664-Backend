@@ -38,6 +38,9 @@ namespace Factory
             services.AddScoped<ILogicaPsicologo, LogicaPsicologo>();
 
             services.AddScoped<ICitaRepositorio, CitaRepositorio>();
+
+            services.AddScoped<ILogicaReflection, LogicaReflection>();
+
             services.AddScoped<ILogicaCita, LogicaCita>();
    
 

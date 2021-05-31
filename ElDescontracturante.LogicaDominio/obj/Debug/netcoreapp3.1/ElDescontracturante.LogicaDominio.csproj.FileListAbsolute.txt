@@ -12,7 +12,9 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDomini
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csprojAssemblyReference.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.AssemblyInfoInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.AssemblyInfo.cs
-C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csproj.CoreCompileInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.LogicaDominio\obj\Debug\netcoreapp3.1\ElDescontracturante.LogicaDominio.csproj.CoreCompileInputs.cache
