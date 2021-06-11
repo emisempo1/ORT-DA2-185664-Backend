@@ -38,6 +38,9 @@ namespace ElDescontracturante.AccesoADatos
             modelBuilder.Entity<Token>()
                .HasKey(c => c.Id);
 
+            modelBuilder.Entity<Bonificacion>()
+             .HasKey(c => c.ID);
+
             modelBuilder.Entity<Administrador>()
               .HasKey(c => c.Email);
 

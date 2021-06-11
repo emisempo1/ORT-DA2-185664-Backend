@@ -40,33 +40,22 @@ namespace WebApplication1.Controllers
                 return BadRequest("Formato de JSON Incorrecto");
             }
             Categoria categoria = new Categoria();
-
             try
             {
-                categoria = this.logicaReflection.InstanciarObjetosConInterfazConocida(importacionModel.TipoDeArchivo);
-
-                
-
+                categoria = this.logicaReflection.InstanciarObjetosConInterfazConocida(importacionModel.TipoDeArchivo, importacionModel.Path);
                 for (int i = 0; i < categoria.ListaPlaylist.Count; i++)
                 {
                     this.logicaAudio.AgregarOmitiendoRepetidos(categoria.ListaPlaylist[i].ListaAudios);
                     this.logicaPlaylist.AgregarOmitiendoRepetidos(categoria.ListaPlaylist[i]);
                     this.logicaPlaylist.AgregarAsociaciones(categoria.ListaPlaylist[i]);
                     this.logicaCategoria.AgregarPlaylistACategoriaOmitiendoRepetidos(categoria.NombreCategoria, categoria.ListaPlaylist[i]);
-                }
-                
-
+                }     
             }
-
             catch (Excepciones.ExcepcionMotorBaseDeDatosCaido e)
             {
                 return StatusCode(500, e.Message);
             }
             return Ok("Archivo Importado Con Exito");
-
-
         }
-
-
     }
 }

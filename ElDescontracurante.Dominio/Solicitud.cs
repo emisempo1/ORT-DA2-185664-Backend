@@ -12,9 +12,7 @@ namespace ElDescontracturante.Dominio
         public string Nombre { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public Problematica NombreProblematica { get; set; }
-      
-
-
+        public int MinutosDeLaConsulta { get; set; }
 
     }
 }

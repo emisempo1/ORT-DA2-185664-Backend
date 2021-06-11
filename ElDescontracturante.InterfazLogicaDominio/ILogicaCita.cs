@@ -14,6 +14,8 @@ namespace ElDescontracturante.InterfazLogicaDominio
         public Psicologo PsicologoMasAntiguo(List<Psicologo> listaPsicologosEspecializadosDisponibles, DateTime fecha);
         public List<Psicologo> ObtenerPsicologosEspecializadosLibresEnElDia(List<Psicologo> listaPsicologosEspecializados, DateTime fecha);
         public int CantidadCitasEnElDia(Psicologo psicologo, DateTime fecha);
+        public int CalcularCostoConsulta(int MinutosDeLaConsulta, Cita Cita);
+     
 
     }
 }

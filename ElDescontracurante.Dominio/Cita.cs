@@ -16,5 +16,6 @@ namespace ElDescontracturante.Dominio
         public ModoDeConsulta TipoDeConsulta { get; set; }
         public string Direccion { get; set; }
         public string EmailPaciente { get; set; }
+        public int Costo { get; set; }
     }
 }

@@ -19,6 +19,8 @@ namespace WebApplication1.Models
         public string[] ProblematicasEspecializadas { get; set; }
         public string FechaIngreso { get; set; }
         public string DireccionFisica { get; set; }
+        public int Tarifa { get; set; }
+
 
         public Psicologo ToEntity()
         {
@@ -30,6 +32,7 @@ namespace WebApplication1.Models
                 psicologo.TipoDeConsulta = (ElDescontracturante.Dominio.Psicologo.ModoDeConsulta)Enum.Parse(typeof(ElDescontracturante.Dominio.Psicologo.ModoDeConsulta), this.TipoDeConsulta);
                 psicologo.FechaIngreso = Convert.ToDateTime(FechaIngreso);
                 psicologo.DireccionFisica = this.DireccionFisica;
+                psicologo.Tarifa = this.Tarifa;
                 return psicologo;
             }
             catch (System.ArgumentException)

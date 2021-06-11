@@ -98,6 +98,23 @@ namespace ElDescontracturante.AccesoADatos.Repositorios
             }
         }
 
+        public Psicologo Obtener(string email)
+        {
+            List<Psicologo> listaPsicologoes = Obtener();
+
+            for (int i = 0; i < listaPsicologoes.Count; i++)
+            {
+                if (listaPsicologoes[i].Email == email)
+                {
+                    return listaPsicologoes[i];
+                }
+            }
+
+            throw new Excepciones.ExcepcionPsicologoInexistente(email);
+        }
+
+
+
         public List<Problematica_Psicologo> ObtenerProblematica()
         {
             try

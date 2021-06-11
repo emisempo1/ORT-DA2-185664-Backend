@@ -7,6 +7,6 @@ namespace ElDescontracturante.InterfazLogicaDominio
 {
     public interface ILogicaReflection
     {
-        public Categoria InstanciarObjetosConInterfazConocida(string tipoDeArchivo);
+        public Categoria InstanciarObjetosConInterfazConocida(string tipoDeArchivo, string path);
     }
 }

@@ -30,7 +30,7 @@ namespace ElDescontracturante.LogicaDominio
                 Playlist_Audio playlistAudio = new Playlist_Audio();
                 playlistAudio.NombrePlaylist = unaPlaylist.Nombre;
                 playlistAudio.NombreAudio = unaPlaylist.ListaAudios[i].Nombre;
-                playlistRepositorio.AgregarAsociacion(playlistAudio);
+                this.AgregarAsociacion(playlistAudio);
             }
         }
 

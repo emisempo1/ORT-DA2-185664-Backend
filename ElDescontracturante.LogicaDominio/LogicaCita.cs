@@ -11,11 +11,15 @@ namespace ElDescontracturante.LogicaDominio
     public class LogicaCita : ILogicaCita
     {
         private readonly ICitaRepositorio CitaRepositorio;
+        private readonly IPsicologoRepositorio psicologoRepositorio;
+        private readonly IBonificacionRepositorio bonificacionRepositorio;
 
-
-        public LogicaCita(ICitaRepositorio CitaRepositorio)
+    
+        public LogicaCita(ICitaRepositorio CitaRepositorio,IPsicologoRepositorio psicologoRepositorio, IBonificacionRepositorio bonificacionRepositorio)
         {
             this.CitaRepositorio = CitaRepositorio;
+            this.psicologoRepositorio = psicologoRepositorio;
+            this.bonificacionRepositorio = bonificacionRepositorio;
         }
 
         public void Agregar(Cita unaCita)
@@ -27,9 +31,7 @@ namespace ElDescontracturante.LogicaDominio
         public List<Cita> Obtener(string email)
         {
             List<Cita> listaCitaes = CitaRepositorio.Obtener();
-
             List<Cita> listaCitasDeUnPsicolgo = new List<Cita>();
-
             for (int i = 0; i < listaCitaes.Count; i++)
             {
                 if (listaCitaes[i].EmailPsicologo == email)
@@ -37,11 +39,22 @@ namespace ElDescontracturante.LogicaDominio
                     listaCitasDeUnPsicolgo.Add(listaCitaes[i]);
                 }
             }
-
             return listaCitasDeUnPsicolgo;
         }
 
-
+        public List<Cita> ObtenerCitasPaciente(string emailPaciente)
+        {
+            List<Cita> listaCitaes = CitaRepositorio.Obtener();
+            List<Cita> listaCitasDeUnPsicolgo = new List<Cita>();
+            for (int i = 0; i < listaCitaes.Count; i++)
+            {
+                if (listaCitaes[i].EmailPaciente == emailPaciente)
+                {
+                    listaCitasDeUnPsicolgo.Add(listaCitaes[i]);
+                }
+            }
+            return listaCitasDeUnPsicolgo;
+        }
 
 
         public Cita GenerarCita(List<Psicologo> listaPsicologosEspecializados, DateTime fecha)
@@ -73,10 +86,7 @@ namespace ElDescontracturante.LogicaDominio
                         break;
                 }
             }
-
             return AsignarPsicologoACita(psicologos, fecha);
-
-
         }
 
 
@@ -117,14 +127,10 @@ namespace ElDescontracturante.LogicaDominio
         }
 
 
-
         public List<Psicologo> ObtenerPsicologosEspecializadosLibresEnElDia(List<Psicologo> listaPsicologosEspecializados, DateTime fecha)
         {
             List<Cita> listaCitas = CitaRepositorio.Obtener();
-
             List<Psicologo> listaPsicologosEspecializadosLibresEnLaSemana = new List<Psicologo>();
-
-
             for (int i = 0; i < listaPsicologosEspecializados.Count; i++)
             {
                 if (CantidadCitasEnElDia(listaPsicologosEspecializados[i], fecha) < 5)
@@ -133,15 +139,12 @@ namespace ElDescontracturante.LogicaDominio
                 }
             }
             return listaPsicologosEspecializadosLibresEnLaSemana;
-
         }
 
         public int CantidadCitasEnElDia(Psicologo psicologo, DateTime fecha)
         {
             int cantidadCitas = 0;
             List<Cita> listaCitas = CitaRepositorio.Obtener();
-
-
 
             for (int i = 0; i < listaCitas.Count; i++)
             {
@@ -156,7 +159,26 @@ namespace ElDescontracturante.LogicaDominio
         }
 
 
+        public int CalcularCostoConsulta(int MinutosDeLaConsulta, Cita cita )
+        {
+            LogicaBonificacion logicaBonificacion = new LogicaBonificacion(CitaRepositorio, psicologoRepositorio, bonificacionRepositorio);
+            int costo;
+            Psicologo unPsicologo = psicologoRepositorio.Obtener(cita.EmailPsicologo);
+            double cantidadHoras = (double)MinutosDeLaConsulta / 60;
+            try
+            {
+                Bonificacion bonificacion = logicaBonificacion.ObtenerBonificacion(cita.EmailPaciente);
+                logicaBonificacion.Usar(bonificacion);
+                costo = (int)((cantidadHoras * unPsicologo.Tarifa)*(1-((double)bonificacion.PorcentajeDescuento*0.01)));
+                return costo;
+            }
+            catch (Excepciones.ExcepcionBonificacionInexistente)
+            {
+                costo = (int)(cantidadHoras * unPsicologo.Tarifa);
+                return costo;
+            }
+        }
 
-
+       
     };
 }

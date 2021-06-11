@@ -37,6 +37,22 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Bonificacion",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PorcentajeDescuento = table.Column<int>(type: "int", nullable: false),
+                    Usado = table.Column<bool>(type: "bit", nullable: false),
+                    Aprobado = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Bonificacion", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Categoria_Playlist",
                 columns: table => new
                 {
@@ -69,7 +85,9 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     NombrePsicologo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaConsulta = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TipoDeConsulta = table.Column<int>(type: "int", nullable: false),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmailPaciente = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Costo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,7 +139,8 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TipoDeConsulta = table.Column<int>(type: "int", nullable: false),
                     FechaIngreso = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DireccionFisica = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    DireccionFisica = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Tarifa = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -148,6 +167,9 @@ namespace ElDescontracturante.AccesoADatos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Audios");
+
+            migrationBuilder.DropTable(
+                name: "Bonificacion");
 
             migrationBuilder.DropTable(
                 name: "Categoria_Playlist");

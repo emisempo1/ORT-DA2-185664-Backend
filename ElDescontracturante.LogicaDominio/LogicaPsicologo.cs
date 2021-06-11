@@ -37,17 +37,7 @@ namespace ElDescontracturante.LogicaDominio
 
         public Psicologo Obtener(string email)
         {
-            List<Psicologo> listaPsicologoes = psicologoRepositorio.Obtener();
-
-            for (int i = 0; i < listaPsicologoes.Count; i++)
-            {
-                if (listaPsicologoes[i].Email == email)
-                {
-                    return listaPsicologoes[i];
-                }
-            }
-
-            throw new Excepciones.ExcepcionPsicologoInexistente(email);
+          return psicologoRepositorio.Obtener(email);
         }
 
         public List<Psicologo> ObtenerPsicologosEspecializado(Problematica_Psicologo.Problematica problematica)

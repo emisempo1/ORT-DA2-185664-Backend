@@ -39,6 +39,9 @@ namespace Factory
 
             services.AddScoped<ICitaRepositorio, CitaRepositorio>();
 
+            services.AddScoped<IBonificacionRepositorio, BonificacionRepositorio>();
+            services.AddScoped<ILogicaBonificacion, LogicaBonificacion>();
+
             services.AddScoped<ILogicaReflection, LogicaReflection>();
 
             services.AddScoped<ILogicaCita, LogicaCita>();

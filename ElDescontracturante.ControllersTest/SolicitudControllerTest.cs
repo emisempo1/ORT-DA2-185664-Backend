@@ -24,6 +24,7 @@ namespace Controllers.Tests
         Mock<ILogicaCita> mockCita;
         Mock<ILogicaLogin> mockLogin;
         Mock<ILogicaPsicologo> mockLogicaPsicologo;
+        Mock<ILogicaBonificacion> mockLogicaBonificacion;
 
         SolicitudController controllerSolicitud;
 
@@ -36,6 +37,8 @@ namespace Controllers.Tests
             mockCita = new Mock<ILogicaCita>();
             mockLogin = new Mock<ILogicaLogin>();
             mockLogicaPsicologo = new Mock<ILogicaPsicologo>();
+            mockLogicaBonificacion = new Mock<ILogicaBonificacion>();
+
 
             cita = new Cita()
             {
@@ -48,7 +51,7 @@ namespace Controllers.Tests
             };
 
 
-            controllerSolicitud = new SolicitudController(mockCita.Object, mockLogin.Object,mockLogicaPsicologo.Object);
+            controllerSolicitud = new SolicitudController(mockCita.Object, mockLogin.Object,mockLogicaPsicologo.Object, mockLogicaBonificacion.Object);
         }
 
         [TestMethod]

@@ -7,6 +7,6 @@ namespace ElDescontracturante.IImportacion
 {
     public interface InterfazImportacion
     {
-        Categoria ObtenerPlayListyAudios();
+        Categoria ObtenerPlayListyAudios(string path);
     }
 }

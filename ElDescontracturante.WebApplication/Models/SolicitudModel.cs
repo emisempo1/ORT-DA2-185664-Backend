@@ -15,9 +15,9 @@ namespace WebApplication1.Models
         public string Celular { get; set; }
         public string Email { get; set; }
         public string Nombre { get; set; }
-         
         public string FechaNacimiento  { get; set; }
         public string Problematica { get; set; }
+        public string MinutosDeLaConsulta { get; set; }
 
         public Solicitud ToEntity()
         {
@@ -29,6 +29,7 @@ namespace WebApplication1.Models
                 Solicitud.Email = this.Email;
                 Solicitud.NombreProblematica = (ElDescontracturante.Dominio.Problematica_Psicologo.Problematica)Enum.Parse(typeof(ElDescontracturante.Dominio.Problematica_Psicologo.Problematica), this.Problematica);
                 Solicitud.FechaNacimiento = Convert.ToDateTime(FechaNacimiento);
+                Solicitud.MinutosDeLaConsulta = Int32.Parse(this.MinutosDeLaConsulta);
 
                 return Solicitud;
             }

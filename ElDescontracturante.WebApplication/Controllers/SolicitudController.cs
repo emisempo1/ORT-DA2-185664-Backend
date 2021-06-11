@@ -15,16 +15,16 @@ namespace WebApplication1.Controllers
     public class SolicitudController : ControllerBase
     {
         private readonly ILogicaCita logicaCita;
-
         private readonly ILogicaPsicologo logicaPsicologo;
-
         private readonly ILogicaLogin logicaLogin;
+        private readonly ILogicaBonificacion logicaBonificacion;
 
-        public SolicitudController(ILogicaCita logicaCita, ILogicaLogin logicaLogin, ILogicaPsicologo logicaPsicologo)
+        public SolicitudController(ILogicaCita logicaCita, ILogicaLogin logicaLogin, ILogicaPsicologo logicaPsicologo,ILogicaBonificacion logicaBonificacion)
         {
             this.logicaCita = logicaCita;
             this.logicaLogin = logicaLogin;
-            this.logicaPsicologo = logicaPsicologo; 
+            this.logicaPsicologo = logicaPsicologo;
+            this.logicaBonificacion = logicaBonificacion;
         }
 
 
@@ -41,7 +41,9 @@ namespace WebApplication1.Controllers
                DateTime fecha = DateTime.Today;
                cita = logicaCita.GenerarCita(psicEspecializados,fecha);
                cita.EmailPaciente = solicitud.Email;
+               cita.Costo = logicaCita.CalcularCostoConsulta(solicitud.MinutosDeLaConsulta,cita);
                logicaCita.Agregar(cita);
+               logicaBonificacion.AgregarBonificacion(cita.EmailPaciente);
             }
          
             catch (Excepciones.ExcepcionNombreProblematicaIncorrecta e)

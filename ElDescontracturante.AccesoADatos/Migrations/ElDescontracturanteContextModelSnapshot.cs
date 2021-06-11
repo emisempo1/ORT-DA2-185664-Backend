@@ -60,6 +60,30 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                     b.ToTable("Audios");
                 });
 
+            modelBuilder.Entity("ElDescontracturante.Dominio.Bonificacion", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Aprobado")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PorcentajeDescuento")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Usado")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Bonificacion");
+                });
+
             modelBuilder.Entity("ElDescontracturante.Dominio.Categoria", b =>
                 {
                     b.Property<int>("NombreCategoria")
@@ -89,6 +113,9 @@ namespace ElDescontracturante.AccesoADatos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Costo")
+                        .HasColumnType("int");
 
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
@@ -168,6 +195,9 @@ namespace ElDescontracturante.AccesoADatos.Migrations
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Tarifa")
+                        .HasColumnType("int");
 
                     b.Property<int>("TipoDeConsulta")
                         .HasColumnType("int");

@@ -10,17 +10,17 @@ using System.Text;
 using Newtonsoft.Json;
 
 namespace ElDescontracturante.LogicaDominio
-{
+{ 
     public class LogicaReflection : ILogicaReflection
     {
 
-        public Categoria InstanciarObjetosConInterfazConocida(string tipoDeArchivo)
+        public Categoria InstanciarObjetosConInterfazConocida(string tipoDeArchivo,string path)
         {
             var dllFile = new FileInfo(@".\Reflection\" + "Importar" + tipoDeArchivo + ".dll");
             Assembly myAssembly = Assembly.LoadFile(dllFile.FullName);
             IEnumerable<Type> implementations = GetTypesInAssembly<InterfazImportacion>(myAssembly);
             InterfazImportacion importacion = (InterfazImportacion)Activator.CreateInstance(implementations.First());
-            return importacion.ObtenerPlayListyAudios();
+            return importacion.ObtenerPlayListyAudios(path);
         }
 
         public static List<Type> GetTypesInAssembly<Interface>(Assembly assembly)
