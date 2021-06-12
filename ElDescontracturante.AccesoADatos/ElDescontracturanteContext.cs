@@ -64,7 +64,7 @@ namespace ElDescontracturante.AccesoADatos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Database = Descontracturante;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Server = tcp:descontracuranteservidor.database.windows.net, 1433; Initial Catalog = DescontracturanteBD; Persist Security Info = False; User ID = emisempo1; Password = Critius@1x ; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
 
         }
 
