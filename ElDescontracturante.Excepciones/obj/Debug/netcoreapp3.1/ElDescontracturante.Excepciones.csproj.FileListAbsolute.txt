@@ -6,4 +6,15 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.csproj.CoreCompileInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.pdb
+<<<<<<< HEAD
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.csprojAssemblyReference.cache
+=======
+C:\Repositorios\ElDescontracturante.Excepciones\bin\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.deps.json
+C:\Repositorios\ElDescontracturante.Excepciones\bin\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.dll
+C:\Repositorios\ElDescontracturante.Excepciones\bin\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.pdb
+C:\Repositorios\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.AssemblyInfoInputs.cache
+C:\Repositorios\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.AssemblyInfo.cs
+C:\Repositorios\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.csproj.CoreCompileInputs.cache
+C:\Repositorios\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.dll
+C:\Repositorios\ElDescontracturante.Excepciones\obj\Debug\netcoreapp3.1\ElDescontracturante.Excepciones.pdb
+>>>>>>> f9be3f04a1114925c2e1726e1bff536e6af6c26a
