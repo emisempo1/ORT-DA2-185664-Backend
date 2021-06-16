@@ -10,3 +10,15 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazImpo
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb
+C:\Repositorios\ElDescontracturante.InterfazImportacion\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.deps.json
+C:\Repositorios\ElDescontracturante.InterfazImportacion\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Repositorios\ElDescontracturante.InterfazImportacion\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb
+C:\Repositorios\ElDescontracturante.InterfazImportacion\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Repositorios\ElDescontracturante.InterfazImportacion\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.csproj.AssemblyReference.cache
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.AssemblyInfoInputs.cache
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.AssemblyInfo.cs
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.csproj.CoreCompileInputs.cache
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.csproj.CopyComplete
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.dll
+C:\Repositorios\ElDescontracturante.InterfazImportacion\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazImportacion.pdb

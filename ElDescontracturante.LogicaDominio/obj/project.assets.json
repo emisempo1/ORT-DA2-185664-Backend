@@ -136,19 +136,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cocho\\.nuget\\packages\\": {}
+    "C:\\Users\\IT\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
+      "projectUniqueName": "C:\\Repositorios\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
       "projectName": "ElDescontracturante.LogicaDominio",
-      "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
-      "packagesPath": "C:\\Users\\cocho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.LogicaDominio\\obj\\",
+      "projectPath": "C:\\Repositorios\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
+      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
+      "outputPath": "C:\\Repositorios\\ElDescontracturante.LogicaDominio\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cocho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -160,18 +165,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj": {
-              "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj"
+            "C:\\Repositorios\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj": {
+              "projectPath": "C:\\Repositorios\\ElDescontracturante.Excepciones\\ElDescontracturante.Excepciones.csproj"
             },
-            "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj": {
-              "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj"
+            "C:\\Repositorios\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj": {
+              "projectPath": "C:\\Repositorios\\ElDescontracturante.InterfazAccesoADatos\\ElDescontracturante.InterfazAccesoADatos.csproj"
             },
-            "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazImportacion\\ElDescontracturante.InterfazImportacion.csproj": {
-              "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazImportacion\\ElDescontracturante.InterfazImportacion.csproj"
+            "C:\\Repositorios\\ElDescontracturante.InterfazImportacion\\ElDescontracturante.InterfazImportacion.csproj": {
+              "projectPath": "C:\\Repositorios\\ElDescontracturante.InterfazImportacion\\ElDescontracturante.InterfazImportacion.csproj"
             },
-            "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {
-              "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj"
+            "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {
+              "projectPath": "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj"
             }
           }
         }
@@ -184,6 +190,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -205,7 +212,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

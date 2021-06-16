@@ -10,3 +10,15 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAcce
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.CopyComplete
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.deps.json
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\bin\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.AssemblyReference.cache
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.AssemblyInfoInputs.cache
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.AssemblyInfo.cs
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.CoreCompileInputs.cache
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.csproj.CopyComplete
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.dll
+C:\Repositorios\ElDescontracturante.InterfazAccesoADatos\obj\Debug\netcoreapp3.1\ElDescontracturante.InterfazAccesoADatos.pdb

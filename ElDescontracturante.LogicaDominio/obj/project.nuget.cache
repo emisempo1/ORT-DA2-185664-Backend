@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8cFil8MDe/PwC1BKPm9i7esK2YsqciKxv8MPpGjbspLBWvzvE8Hc9OjYgf6TkL2Kje2QLXLdBMj5Sn98ZTDmHw==",
+  "dgSpecHash": "wnQv9snArXgnx1ILscedh8BcL4id+AIttT++vpS4ek3T7I6q9ZYzhVuShVW7SuGjEXVWi2i+8OCnCroHwUbdvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
+  "projectFilePath": "C:\\Repositorios\\ElDescontracturante.LogicaDominio\\ElDescontracturante.LogicaDominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cocho\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\IT\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

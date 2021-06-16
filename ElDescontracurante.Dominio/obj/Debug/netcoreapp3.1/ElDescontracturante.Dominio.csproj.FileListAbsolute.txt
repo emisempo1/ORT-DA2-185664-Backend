@@ -6,3 +6,11 @@ C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\D
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
 C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Repositorios\ElDescontracurante.Dominio\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.deps.json
+C:\Repositorios\ElDescontracurante.Dominio\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Repositorios\ElDescontracurante.Dominio\bin\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.AssemblyInfoInputs.cache
+C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.AssemblyInfo.cs
+C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.csproj.CoreCompileInputs.cache
+C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
+C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+kkfUfapfMY/BtQN9dyrEAGd0dGOgzh1pYUb1mAx9BGvG5DdfviserWdOxlOTgmMiKe+TM3ajzQaGj0iog8mA==",
+  "dgSpecHash": "oqvHx8fkXJ/FX++kwwVQ22crmZHhZ9FTQlLEPuhFgiCI60CkkifrAQQUJalKjJccqGfCH28E7wJd58+bDZ8mmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
+  "projectFilePath": "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

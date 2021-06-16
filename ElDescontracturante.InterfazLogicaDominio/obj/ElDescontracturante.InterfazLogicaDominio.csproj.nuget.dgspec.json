@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {}
+    "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {
+    "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj",
+        "projectUniqueName": "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj",
         "projectName": "ElDescontracturante.InterfazLogicaDominio",
-        "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj",
-        "packagesPath": "C:\\Users\\cocho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracturante.InterfazLogicaDominio\\obj\\",
+        "projectPath": "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\ElDescontracturante.InterfazLogicaDominio.csproj",
+        "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\ElDescontracturante.InterfazLogicaDominio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cocho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +30,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj": {
-                "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj"
+              "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj": {
+                "projectPath": "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj"
               }
             }
           }
@@ -41,6 +46,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -64,21 +70,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj": {
+    "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
+        "projectUniqueName": "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
         "projectName": "ElDescontracturante.Dominio",
-        "projectPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
-        "packagesPath": "C:\\Users\\cocho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cocho\\Documents\\ORT-DA2-185664-Backend\\ElDescontracurante.Dominio\\obj\\",
+        "projectPath": "C:\\Repositorios\\ElDescontracurante.Dominio\\ElDescontracturante.Dominio.csproj",
+        "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\ElDescontracurante.Dominio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cocho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,6 +100,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -101,6 +112,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -116,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
