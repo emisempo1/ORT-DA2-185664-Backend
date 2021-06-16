@@ -14,3 +14,4 @@ C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontract
 C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.csproj.CoreCompileInputs.cache
 C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.dll
 C:\Repositorios\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.pdb
+C:\Users\cocho\Documents\ORT-DA2-185664-Backend\ElDescontracurante.Dominio\obj\Debug\netcoreapp3.1\ElDescontracturante.Dominio.csprojAssemblyReference.cache
